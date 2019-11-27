@@ -1,0 +1,20 @@
+﻿<Window x:Class="ProjetoFinal.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetoFinal"
+        mc:Ignorable="d"
+        Title="Login" Height="133.18" Width="288.262">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="39*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="3,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Grid.Column="1" d:LayoutOverrides="VerticalAlignment"/>
+        <TextBox x:Name="textBox" Grid.Column="1" Height="23" Margin="79,9,74,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox1" Grid.Column="1" Margin="79,41,74,38" TextWrapping="Wrap" Text="TextBox"/>
+        <TextBlock x:Name="textBlock1" Grid.Column="1" HorizontalAlignment="Left" Margin="3,41,0,45" TextWrapping="Wrap" Text="TextBlock" d:LayoutOverrides="Height"/>
+
+    </Grid>
+</Window>

@@ -14,14 +14,16 @@ namespace ProjetoFinal
         private string resumoProjeto;
         private string pagamento;
 
-        struct Clientes
+        public Cliente(string nome, string fone, string email, string resProj, string pag)
         {
-            public string nome;
-            public string fone;
-            public string email;
-            public string resumoProjeto;
-            public string pagamento;
+            this.nome = nome;
+            this.fone = fone;
+            this.email = email;
+            resumoProjeto = resProj;
+            pagamento = pag;
         }
+
+
 
     }
 }
