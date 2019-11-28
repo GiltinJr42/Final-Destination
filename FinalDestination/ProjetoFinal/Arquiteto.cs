@@ -37,3 +37,6 @@ namespace ProjetoFinal
         }
     }
 }
+
+
+List<Cliente> a = lista.Open();

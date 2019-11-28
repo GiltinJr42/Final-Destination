@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Triangulo
+namespace ProjetoFinal
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Lógica interna para CadastrarProjeto.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CadastrarProjeto : Window
     {
-        public MainWindow()
+        public CadastrarProjeto()
         {
             InitializeComponent();
         }

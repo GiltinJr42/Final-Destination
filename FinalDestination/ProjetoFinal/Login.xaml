@@ -5,16 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoFinal"
         mc:Ignorable="d"
-        Title="Login" Height="133.18" Width="288.262">
-    <Grid>
+        Title="Login" Height="155.012" Width="221.127">
+    <Grid Margin="0,0,0,3">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="39*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="3,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Grid.Column="1" d:LayoutOverrides="VerticalAlignment"/>
-        <TextBox x:Name="textBox" Grid.Column="1" Height="23" Margin="79,9,74,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox1" Grid.Column="1" Margin="79,41,74,38" TextWrapping="Wrap" Text="TextBox"/>
-        <TextBlock x:Name="textBlock1" Grid.Column="1" HorizontalAlignment="Left" Margin="3,41,0,45" TextWrapping="Wrap" Text="TextBlock" d:LayoutOverrides="Height"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="-74,52,0,0" TextWrapping="Wrap" Text="Usuário:" VerticalAlignment="Top" RenderTransformOrigin="1.134,0.911"/>
+        <GroupBox x:Name="groupBox" Grid.Column="1" Header="" Margin="0,-3,5,3">
+            <Grid Margin="0,-2,-2,-2">
+                <TextBox x:Name="textBox" Height="23" Margin="62,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="10,14,0,0" TextWrapping="Wrap" Text="Usuário:" VerticalAlignment="Top" RenderTransformOrigin="1.134,0.911" d:LayoutOverrides="VerticalAlignment"/>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="13,44,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBox_Copy" Height="23" Margin="62,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBox_Copy1" Margin="62,42,10,38" TextWrapping="Wrap" Text=""/>
+                <Button x:Name="button" Content="Entrar" Margin="62,0,10,8" VerticalAlignment="Bottom"/>
+            </Grid>
+        </GroupBox>
 
     </Grid>
 </Window>
