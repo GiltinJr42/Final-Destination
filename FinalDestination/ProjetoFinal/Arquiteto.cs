@@ -7,20 +7,25 @@ using System.Threading.Tasks;
 namespace ProjetoFinal
 {
 
-    class Arquiteto
+    class Arquiteto : Cliente
     {
         private Cliente[] clientes = new Cliente[100];
         private int k = 0;
 
         public Cliente[] Listar()
         {
-            Cliente[] x = new Cliente[k];
-            Array.Copy(clientes, x, k);
+            
             return x;
+        }
+
+        private List<Cliente> cliente = new List<Cliente>();
+        public void Inserir(Cliente c)
+        {
+            cliente.Add(c);
         }
         public void Inserir(Cliente c)
         {
-            clientes[k] = c;
+            cliente[k] = c;
             k++;
         }
         public void Atualizar(int i, Curso p)
@@ -39,4 +44,4 @@ namespace ProjetoFinal
 }
 
 
-List<Cliente> a = lista.Open();
+//List<Cliente> a = lista.Open();

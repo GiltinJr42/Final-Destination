@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace ProjetoFinal
 {
-    class Cliente
+    public class Cliente
     {
         private string nome;
         private string fone;
@@ -23,6 +23,9 @@ namespace ProjetoFinal
             resumoProjeto = resProj;
             pagamento = pag;
         }
+
+        public Cliente GetCliente() { Cliente c = new Cliente(this.nome, this.fone, this.email, this.resumoProjeto, this.pagamento); return c;  }
+
         public static Cliente GetCliente()
         {
             var cln = new Cliente()
