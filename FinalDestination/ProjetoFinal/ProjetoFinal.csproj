@@ -75,14 +75,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Arquiteto.cs" />
     <Compile Include="CadastrarCliente.xaml.cs">
       <DependentUpon>CadastrarCliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="CadastrarProjeto.xaml.cs">
       <DependentUpon>CadastrarProjeto.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cliente.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -92,7 +90,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Projeto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -117,6 +114,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{5dba5c8a-69aa-4651-ac30-9ed81b7ecb70}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{3a8bd57b-9e5a-48c5-be24-41e98bc382bd}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
