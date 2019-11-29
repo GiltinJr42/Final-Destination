@@ -12,7 +12,7 @@
                 <GroupBox x:Name="groupBox1" Header="Projetos" Margin="10,0,226,10">
                     <Grid Margin="10,0,-2,6">
                         <Button x:Name="button" Content="Editar Projeto" Margin="10,20,215,0" VerticalAlignment="Top" Height="26"/>
-                        <Button x:Name="button1" Content="Adicionar Projeto" Margin="10,60,215,0" VerticalAlignment="Top" Height="33"/>
+                        <Button x:Name="AddPrj" Content="Adicionar Projeto" Margin="10,60,215,0" VerticalAlignment="Top" Height="33" Click="CadastrarProjeto_Click"/>
                         <Rectangle Fill="#FFF4F4F5" Margin="10,108,215,0" Stroke="Black"/>
                         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Right" Margin="0,20,10,0" Stroke="Black" Width="172" Height="26" VerticalAlignment="Top"/>
                         <TextBlock x:Name="DinheiroAreceber" HorizontalAlignment="Right" Margin="0,25,93,0" TextWrapping="Wrap" Text="Falta receber:" VerticalAlignment="Top"/>
@@ -21,7 +21,7 @@
                         <TextBlock x:Name="textBlock" HorizontalAlignment="Right" Margin="0,25,33,0" TextWrapping="Wrap" Text="2.000 $" VerticalAlignment="Top"/>
                         <TextBlock x:Name="textBlock1" HorizontalAlignment="Right" Margin="0,68,33,0" TextWrapping="Wrap" Text="1.400 $" VerticalAlignment="Top"/>
                         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Right" Margin="0,144,10,0" Stroke="Black" Width="172"/>
-                        <Button x:Name="FaturaMensal" Content="Fatura Mensal" HorizontalAlignment="Right" Margin="0,108,10,0" VerticalAlignment="Top" Width="172"/>
+                        <Button x:Name="FaturaMensal" Content="Fatura Mensal" HorizontalAlignment="Right" Margin="0,108,10,0" VerticalAlignment="Top" Width="172" Click="FaturaMensal_Click"/>
                         <Rectangle Fill="#FFF4F4F5" Margin="10,108,215,160" Stroke="Black"/>
                         <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="95,115,0,0" TextWrapping="Wrap" Text="Orquestra Filarmonica " VerticalAlignment="Top"/>
                         <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="95,136,0,0" TextWrapping="Wrap" Text="Cliente: " VerticalAlignment="Top"/>
@@ -44,7 +44,7 @@
                 <GroupBox x:Name="groupBox2" Header="Clientes" Margin="0,0,10,10" HorizontalAlignment="Right" Width="211">
                     <Grid Margin="10,0,-2,1" RenderTransformOrigin="-0.92,-1.01">
                         <Button x:Name="EditarCliente" Content="Editar Cliente" Margin="10,19,10,0" VerticalAlignment="Top" Height="22"/>
-                        <Button x:Name="AdicionarCliente" Content="Adicionar Cliente" Margin="10,55,10,0" VerticalAlignment="Top" Height="29" Click="Button3_Click"/>
+                        <Button x:Name="AdicionarCliente" Content="Adicionar Cliente" Margin="10,55,10,0" VerticalAlignment="Top" Height="29" Click="AdicionarCliente_Click"/>
                         <Rectangle Fill="#FFF4F4F5" Margin="10,102,10,10" Stroke="Black"/>
                     </Grid>
                 </GroupBox>

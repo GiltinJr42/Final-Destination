@@ -31,11 +31,7 @@ namespace ProjetoFinal
             CadastrarCliente addCliente = new CadastrarCliente();
             addCliente.Show();
         }
-        private void EditarProjeto_Click(object sender, RoutedEventArgs e)
-        {
-            EditarProjeto EdtPrj = new EditarProjeto();
-            EdtPrj.Show();
-        }
+        
         private void CadastrarProjeto_Click(object sender, RoutedEventArgs e)
         {
             CadastrarProjeto AddPrj = new CadastrarProjeto();
@@ -43,11 +39,8 @@ namespace ProjetoFinal
         }
         private void FaturaMensal_Click(object sender, RoutedEventArgs e)
         {
-           FaturaMensal FatMen = new FaturaMensal();
+            FaturaMensal FatMen = new FaturaMensal();
             FatMen.Show();
         }
-       
-
-
     }
 }
