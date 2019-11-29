@@ -63,10 +63,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EditarProjeto.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="FaturaMensal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -88,9 +84,6 @@
     </Compile>
     <Compile Include="CadastrarProjeto.xaml.cs">
       <DependentUpon>CadastrarProjeto.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="EditarProjeto.xaml.cs">
-      <DependentUpon>EditarProjeto.xaml</DependentUpon>
     </Compile>
     <Compile Include="FaturaMensal.xaml.cs">
       <DependentUpon>FaturaMensal.xaml</DependentUpon>

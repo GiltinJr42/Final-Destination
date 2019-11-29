@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Modelo;
+using Negocio;
 
 namespace ProjetoFinal
 {
@@ -19,6 +21,7 @@ namespace ProjetoFinal
     /// </summary>
     public partial class CadastrarCliente : Window 
     {
+        public NCliente cl = new NCliente();
 
         public CadastrarCliente()
         {
@@ -26,7 +29,16 @@ namespace ProjetoFinal
         }
         private void Cads(object sender, RoutedEventArgs e)
         {
+            string n = NomeCliente.Text;
+            string s = SenhaCliente.Password;
+            string m = EmailCliente.Text;
+            string t = TelCliente.Text;
 
+            Pessoa p = new Pessoa();
+
+            p.Nome = n; p.senha = s; p.Email = m; p.fone = t;
+            cl.Inserir(p);
+            this.Close();
         }
     }
 }
