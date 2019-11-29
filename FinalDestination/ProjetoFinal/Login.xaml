@@ -11,15 +11,14 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="39*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="-74,52,0,0" TextWrapping="Wrap" Text="Usuário:" VerticalAlignment="Top" RenderTransformOrigin="1.134,0.911"/>
         <GroupBox x:Name="groupBox" Grid.Column="1" Header="" Margin="0,-3,5,3">
             <Grid Margin="0,-2,-2,-2">
                 <TextBox x:Name="textBox" Height="23" Margin="62,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="10,14,0,0" TextWrapping="Wrap" Text="Usuário:" VerticalAlignment="Top" RenderTransformOrigin="1.134,0.911" d:LayoutOverrides="VerticalAlignment"/>
-                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="13,44,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox_Copy" Height="23" Margin="62,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox_Copy1" Margin="62,42,10,38" TextWrapping="Wrap" Text=""/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="6,10,0,0" TextWrapping="Wrap" Text="Usuário:" VerticalAlignment="Top" RenderTransformOrigin="1.134,0.911" d:LayoutOverrides="VerticalAlignment"/>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="14,44,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
+                <TextBox x:Name="" Height="23" Margin="62,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
                 <Button x:Name="button" Content="Entrar" Margin="62,0,10,8" VerticalAlignment="Bottom"/>
+                <PasswordBox x:Name="SenhaLogin" Margin="62,44,10,36"/>
             </Grid>
         </GroupBox>
 
