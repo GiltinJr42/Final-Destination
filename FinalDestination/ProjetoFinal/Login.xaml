@@ -16,8 +16,8 @@
                 <TextBox x:Name="textBox" Height="23" Margin="62,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
                 <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="6,10,0,0" TextWrapping="Wrap" Text="Usuário:" VerticalAlignment="Top" RenderTransformOrigin="1.134,0.911" d:LayoutOverrides="VerticalAlignment"/>
                 <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="14,44,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
-                <TextBox x:Name="" Height="23" Margin="62,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-                <Button x:Name="button" Content="Entrar" Margin="62,0,10,8" VerticalAlignment="Bottom"/>
+                <TextBox x:Name="User" Height="23" Margin="62,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                <Button x:Name="LoginButton" Content="Entrar" Margin="62,0,10,8" VerticalAlignment="Bottom"/>
                 <PasswordBox x:Name="SenhaLogin" Margin="62,44,10,36"/>
             </Grid>
         </GroupBox>
