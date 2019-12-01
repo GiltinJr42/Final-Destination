@@ -32,11 +32,9 @@ namespace ProjetoFinal
             string n = NomeCliente.Text;
             string s = SenhaCliente.Password;
             string m = EmailCliente.Text;
-            string t = TelCliente.Text;
-
             Pessoa p = new Pessoa();
 
-            p.Nome = n; p.senha = s; p.Email = m; p.fone = t;
+            p.Nome = n; p.senha = s; p.Email = m;
             cl.Inserir(p);
             this.Close();
         }

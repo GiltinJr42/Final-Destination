@@ -42,5 +42,15 @@ namespace ProjetoFinal
             FaturaMensal FatMen = new FaturaMensal();
             FatMen.Show();
         }
+
+        private void EditarCliente_Copy_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Card_AccessKeyPressed(object sender, AccessKeyPressedEventArgs e)
+        {
+
+        }
     }
 }

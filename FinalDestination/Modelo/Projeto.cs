@@ -17,7 +17,7 @@ namespace Modelo
         public List<Arq> a = new List<Arq>();
         public List<Est> e = new List<Est>();
 
-        public Projeto(string nome, string ende, string resProj, string metaEntg)
+        public Projeto(string nome, string ende, string resProj)
         {
             this.nome = nome;
             endereco = ende;

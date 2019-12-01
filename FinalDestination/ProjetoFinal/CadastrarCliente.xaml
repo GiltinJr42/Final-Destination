@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoFinal"
         mc:Ignorable="d"
-        Title="CadastrarCliente" Height="332.123" Width="288.917">
+        Title="CadastrarCliente" Height="285.648" Width="288.917">
     <Grid>
         <GroupBox x:Name="groupBox" Header="" Margin="10">
             <Grid Margin="0,0,-2,0">
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="18,20,0,0" TextWrapping="Wrap" Text="Usuário:" VerticalAlignment="Top"/>
-                <TextBox x:Name="NomeCliente" Height="23" Margin="89,19,20,0" TextWrapping="Wrap" Text="AnaLigia" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
+                <TextBox x:Name="NomeCliente" Height="23" Margin="89,19,20,0" TextWrapping="Wrap" Text="AnaLigia" VerticalAlignment="Top" />
                 <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="18,53,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
-                <PasswordBox x:Name="SenhaCliente" Password="Senha" Height="23" Margin="89,55,20,0" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
+                <PasswordBox x:Name="SenhaCliente" Password="Senha" Height="23" Margin="89,55,20,0" VerticalAlignment="Top" />
                 <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="18,89,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top"/>
-                <TextBox x:Name="EmailCliente" Height="23" Margin="89,88,20,0" TextWrapping="Wrap" Text="@email.com" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
-                <Button x:Name="button" Content="Cadastrar cliente" Margin="18,0,20,40" VerticalAlignment="Bottom" Click="Cads"/>
-                <TextBox x:Name="TelCliente" Height="23" Margin="0,0,20,113" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="142"/>
-                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="18,0,0,120" TextWrapping="Wrap" Text="Telefone:" />
+                <TextBox x:Name="EmailCliente" Height="23" Margin="89,88,20,0" TextWrapping="Wrap" Text="@email.com" VerticalAlignment="Top" />
+                <Button x:Name="button" Content="Cadastrar cliente" Margin="18,0,20,10" VerticalAlignment="Bottom" Click="Cads" d:LayoutOverrides="VerticalAlignment" Height="26"/>
+     
+                <Button x:Name="button1" Content="Adicionar Ícone" Margin="18,0,20,62" VerticalAlignment="Bottom" Height="23"/>
             </Grid>
         </GroupBox>
 
