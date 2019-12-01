@@ -73,6 +73,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ListarClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListarProjetos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -93,6 +101,12 @@
     </Compile>
     <Compile Include="FaturaMensal.xaml.cs">
       <DependentUpon>FaturaMensal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListarClientes.xaml.cs">
+      <DependentUpon>ListarClientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListarProjetos.xaml.cs">
+      <DependentUpon>ListarProjetos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>

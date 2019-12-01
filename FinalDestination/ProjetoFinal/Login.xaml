@@ -5,20 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoFinal"
         mc:Ignorable="d"
-        Title="Login" Height="155.012" Width="221.127">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        FontSize="15"
+        Title="Login" Height="208.944" Width="298.361">
     <Grid Margin="0,0,0,3">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="39*"/>
         </Grid.ColumnDefinitions>
-        <GroupBox x:Name="groupBox" Grid.Column="1" Header="" Margin="0,-3,5,3">
+        <GroupBox x:Name="groupbox" Header="Bem vindos! Espero que aproveitem!" Height="182" VerticalAlignment="Bottom" Margin="0,0,0,-7">
             <Grid Margin="0,-2,-2,-2">
-                <TextBox x:Name="textBox" Height="23" Margin="62,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="6,10,0,0" TextWrapping="Wrap" Text="Usuário:" VerticalAlignment="Top" RenderTransformOrigin="1.134,0.911" d:LayoutOverrides="VerticalAlignment"/>
-                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="14,44,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
-                <TextBox x:Name="User" Height="23" Margin="62,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-                <Button x:Name="LoginButton" Content="Entrar" Margin="62,0,10,8" VerticalAlignment="Bottom"/>
-                <PasswordBox x:Name="SenhaLogin" Margin="62,44,10,36"/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="-141,17,0,0" TextWrapping="Wrap" Text="Usuário:" VerticalAlignment="Top" RenderTransformOrigin="1.134,0.911" d:LayoutOverrides="VerticalAlignment"/>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,51,0,44" TextWrapping="Wrap" Text="Senha:" d:LayoutOverrides="Height"/>
+                <TextBox x:Name="User" Text="Usuário" Height="32" Margin="10,5,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <Button x:Name="LoginButton" Content="Entrar" Margin="10,0,10,16" VerticalAlignment="Bottom" Height="28"/>
+                <PasswordBox x:Name="passwordBox" Margin="62,45,10,62"/>
+
             </Grid>
         </GroupBox>
 

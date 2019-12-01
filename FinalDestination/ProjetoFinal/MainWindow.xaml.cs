@@ -34,8 +34,8 @@ namespace ProjetoFinal
         
         private void CadastrarProjeto_Click(object sender, RoutedEventArgs e)
         {
-            CadastrarProjeto AddPrj = new CadastrarProjeto();
-            AddPrj.Show();
+            CadastrarProjeto addPrj = new CadastrarProjeto();
+            addPrj.Show();
         }
         private void FaturaMensal_Click(object sender, RoutedEventArgs e)
         {
@@ -48,9 +48,17 @@ namespace ProjetoFinal
 
         }
 
-        private void Card_AccessKeyPressed(object sender, AccessKeyPressedEventArgs e)
+        private void ListarProjetos_Click(object sender, RoutedEventArgs e)
         {
+            ListarProjetos listProj = new ListarProjetos();
+            listProj.Show();
+        }
+        private void ListarClientes_Click(object sender, RoutedEventArgs e)
+        {
+            ListarClientes listClient = new ListarClientes();
+            listClient.Show();
 
         }
+
     }
 }

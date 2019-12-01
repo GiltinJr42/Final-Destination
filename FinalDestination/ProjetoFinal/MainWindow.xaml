@@ -1,6 +1,6 @@
 ﻿<Window x:Class="ProjetoFinal.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"      
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoFinal"
@@ -12,7 +12,7 @@
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         Title="PaginaPrincipal" Height="450" Width="800">
 
     <Grid>
@@ -21,19 +21,17 @@
             <GroupBox x:Name="groupBox1" Header="Projetos" Margin="0,0,226,10" materialDesign:ColorZoneAssist.Mode="PrimaryLight">
                 <Grid Margin="10,0,-2,6">
                     <Button x:Name="button" Content="Editar Projeto" Margin="10,10,215,0" VerticalAlignment="Top" Height="36"/>
-                    <Button x:Name="AddPrj" Content="Adicionar Projeto" Margin="10,59,215,0" VerticalAlignment="Top" Height="37" Click="CadastrarProjeto_Click" materialDesign:ColorZoneAssist.Mode="PrimaryDark" />
+                    <Button x:Name="AddPrj" Content="Adicionar Projeto" Margin="10,59,215,0" VerticalAlignment="Top" Height="37" Click="CadastrarProjeto_Click" Style="{DynamicResource MaterialDesignRaisedLightButton}" />
                     <materialDesign:Card Margin="10,157,215,10" VerticalAlignment="Stretch" materialDesign:ShadowAssist.ShadowEdges="Bottom"/>
                     <Button x:Name="FaturaMensal" Content="Fatura Mensal" Margin="0,108,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="172" Click="FaturaMensal_Click"/>
-                    <Button x:Name="button1" Content="Listar Todos os Projetos" Margin="10,108,215,0" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
-                    <materialDesign:Card Margin="0,157,10,10" VerticalAlignment="Stretch" materialDesign:ShadowAssist.ShadowEdges="Bottom" HorizontalAlignment="Right" Width="172" />
+                    <Button x:Name="ListarProjetos" Content="Listar Todos os Projetos" Margin="10,108,215,0" VerticalAlignment="Top" d:LayoutOverrides="Height" Click="ListarProjetos_Click"/>
                     <materialDesign:Card Margin="0,10,10,0" VerticalAlignment="Top" materialDesign:ShadowAssist.ShadowEdges="Bottom" HorizontalAlignment="Right" Width="172" Height="86" />
-
                 </Grid>
             </GroupBox>
             <GroupBox x:Name="groupBox2" Header="Clientes" Margin="0,0,15,10" HorizontalAlignment="Right" Width="211" materialDesign:ColorZoneAssist.Mode="PrimaryLight">
                 <Grid Margin="10,0,-2,1" RenderTransformOrigin="-0.92,-1.01">
                     <Button x:Name="EditarCliente" Content="Editar Cliente" Margin="10,10,10,0" VerticalAlignment="Top" Height="32"/>
-                    <Button x:Name="AdicionarCliente" Content="Adicionar Cliente" Margin="10,58,10,0" VerticalAlignment="Top" Height="37" Click="AdicionarCliente_Click"/>
+                    <Button x:Name="AdicionarCliente" Content="Adicionar Cliente" Margin="10,58,10,0" VerticalAlignment="Top" Height="37" Click="AdicionarCliente_Click" Style="{DynamicResource MaterialDesignRaisedLightButton}"/>
                     <Button x:Name="EditarCliente_Copy" Content="Listar Clientes" Margin="10,112,10,0" VerticalAlignment="Top" Height="26" Click="EditarCliente_Copy_Click"/>
                     <materialDesign:Card Margin="10,157,10,10" VerticalAlignment="Stretch" materialDesign:ShadowAssist.ShadowEdges="Bottom" d:LayoutOverrides="LeftMargin, RightMargin" />
                 </Grid>
