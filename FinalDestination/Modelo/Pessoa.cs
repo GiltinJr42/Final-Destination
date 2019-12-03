@@ -13,6 +13,8 @@ namespace Modelo
         public string Email{ get; set; }
         public string fone { get; set; }
         public string senha { get; set; }
+        public string foto { get; set; }
         public int Tipo { get; set; }
+     
     }
 }

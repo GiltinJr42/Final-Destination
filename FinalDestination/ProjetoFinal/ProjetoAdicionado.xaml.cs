@@ -23,6 +23,8 @@ namespace ProjetoFinal
         {
             InitializeComponent();
         }
+
+
         private void OKProjetoADD_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

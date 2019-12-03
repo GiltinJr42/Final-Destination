@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Win32;
 
 namespace Modelo
 {
@@ -15,6 +16,8 @@ namespace Modelo
         public double preco { get; set; }
         public double valorConstr { get; set; }
         public string linksDrive { get; set; }
+        public string foto { get; set; }
+
         public List<CR> c = new List<CR>();
         public List<Arq> a = new List<Arq>();
         public List<Est> e = new List<Est>();

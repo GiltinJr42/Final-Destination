@@ -21,11 +21,10 @@
         </Grid.ColumnDefinitions>
         <GroupBox x:Name="groupbox" Header="Bem vindos! Espero que aproveitem!" Height="182" VerticalAlignment="Bottom" Margin="0,0,0,-7">
             <Grid Margin="0,-2,-2,-2">
-                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="-141,17,0,0" TextWrapping="Wrap" Text="Usuário:" VerticalAlignment="Top" RenderTransformOrigin="1.134,0.911" d:LayoutOverrides="VerticalAlignment"/>
                 <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,51,0,44" TextWrapping="Wrap" Text="Senha:" d:LayoutOverrides="Height"/>
-                <TextBox x:Name="User" Text="Usuário" Height="32" Margin="10,5,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                <Button x:Name="LoginButton" Content="Entrar" Margin="10,0,10,16" VerticalAlignment="Bottom" Height="28"/>
-                <PasswordBox x:Name="passwordBox" Margin="62,45,10,62"/>
+                <TextBox x:Name="UsuarioBtn" Text="Usuário" Height="32" Margin="10,5,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <Button x:Name="LoginButton" Content="Entrar" Margin="10,0,10,16" VerticalAlignment="Bottom" Height="28" Click="LoginButton_Click"/>
+                <PasswordBox x:Name="senhaBtn" Margin="59,45,10,62"/>
 
             </Grid>
         </GroupBox>

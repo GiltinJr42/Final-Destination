@@ -19,7 +19,7 @@ namespace ProjetoFinal
     /// <summary>
     /// Lógica interna para CadastrarCliente.xaml
     /// </summary>
-    public partial class CadastrarCliente : Window 
+    public partial class CadastrarCliente : Window
     {
         public NCliente cl = new NCliente();
 
@@ -32,14 +32,24 @@ namespace ProjetoFinal
             string n = NomeCliente.Text;
             string s = SenhaCliente.Password;
             string m = EmailCliente.Text;
+            string t = FoneCliente.Text;
             Pessoa p = new Pessoa();
 
-            p.Nome = n; p.senha = s; p.Email = m;
+            p.Nome = n; p.senha = s; p.Email = m; p.fone = t;
             cl.Inserir(p);
             ClienteAdicionado clientAdd = new ClienteAdicionado();
+
+
+
             this.Close();
             clientAdd.Show();
-           
+
+        }
+        private void AdicionarIconeCliente_Click(object sender, RoutedEventArgs e)
+        {
+            EscolherImagem escImg = new EscolherImagem();
+            escImg.Show();
+
         }
     }
 }

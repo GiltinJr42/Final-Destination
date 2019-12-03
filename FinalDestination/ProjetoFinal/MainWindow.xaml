@@ -32,7 +32,7 @@
                 <Grid Margin="10,0,-2,1" RenderTransformOrigin="-0.92,-1.01">
                     <Button x:Name="EditarCliente" Content="Editar Cliente" Margin="10,10,10,0" VerticalAlignment="Top" Height="32"/>
                     <Button x:Name="AdicionarCliente" Content="Adicionar Cliente" Margin="10,58,10,0" VerticalAlignment="Top" Height="37" Click="AdicionarCliente_Click" Style="{DynamicResource MaterialDesignRaisedLightButton}"/>
-                    <Button x:Name="EditarCliente_Copy" Content="Listar Clientes" Margin="10,112,10,0" VerticalAlignment="Top" Height="26" Click="EditarCliente_Copy_Click"/>
+                    <Button x:Name="EditarCliente_Copy" Content="Listar Clientes" Margin="10,109,10,0" VerticalAlignment="Top" Height="29" Click="EditarCliente_Copy_Click"/>
                     <materialDesign:Card Margin="10,157,10,10" VerticalAlignment="Stretch" materialDesign:ShadowAssist.ShadowEdges="Bottom" d:LayoutOverrides="LeftMargin, RightMargin" />
                 </Grid>
             </GroupBox>

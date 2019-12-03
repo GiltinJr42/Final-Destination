@@ -13,8 +13,22 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
-        Title="ListarClientes" Height="450" Width="800">
+        Title="ListarClientes" Height="450" Width="468.868">
     <Grid>
-        
+        <GroupBox x:Name="groupBox" Header="GroupBox" Margin="10">
+            <Grid Margin="0,0,0,12" Width="431">
+                <ListView ItemsSource="{DynamicResource clientes}">
+
+                    <ListView ItemsSource="{Binding FutebolCollection}">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Width="140" Header="Time"  DisplayMemberBinding="{Binding Cliente}"  />
+                                <GridViewColumn Width="140" Header="Treinador"  DisplayMemberBinding="{Binding Projeto}" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+            </Grid>
+        </GroupBox>
+
     </Grid>
 </Window>

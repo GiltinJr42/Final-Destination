@@ -14,5 +14,9 @@
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
         Title="FaturaMensal" Height="450" Width="301.031">
-    <Grid/>
+    <Grid>
+        <GroupBox x:Name="groupBox" Header="Fatura mensal" Margin="10">
+            <Grid Width="254"/>
+        </GroupBox>
+    </Grid>
 </Window>

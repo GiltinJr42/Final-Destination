@@ -23,5 +23,20 @@ namespace ProjetoFinal
         {
             InitializeComponent();
         }
+        public static bool VerificarSenha(string usuario, string senha)
+        {
+            bool r = false;
+            if (usuario == "Admin") r = senha == "123";
+            return r;
+        }
+        public string usuario { get => txtUsuario.Text; }
+        public string senha { get => txtSenha.Password; }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = true;
+        }
+
+        
     }
 }
