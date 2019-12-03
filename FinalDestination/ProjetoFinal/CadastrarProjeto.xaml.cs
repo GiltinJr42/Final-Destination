@@ -11,17 +11,41 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Negocio;
+using Modelo;
+using ProjetoFinal;
 
 namespace ProjetoFinal
+
 {
     /// <summary>
     /// Lógica interna para CadastrarProjeto.xaml
     /// </summary>
     public partial class CadastrarProjeto : Window
     {
-        public CadastrarProjeto()
-        {
-            InitializeComponent();
+         public NProjeto cl = new NProjeto();
+
+            public CadastrarProjeto()
+            {
+                InitializeComponent();
+            }
+            private void AddProjetoButton_Click(object sender, RoutedEventArgs e)
+            {
+                string nome = NomeProjeto.Text;
+                string endereco = EnderecoProjeto.Text;
+                string sinopse = SinopseProjeto.Text;
+                string linksDrive = LinksGoogleDrive.Text;
+                double preco = double.Parse(PrecoDeConstrucaoProjeto.Text);
+                double valorConstr = double.Parse(PrecoProjeto.Text);
+                Projeto p = new Projeto();
+
+                p.nome = nome; p.endereco = endereco; p.sinopse = sinopse; p.linksDrive = linksDrive; p.preco = preco; p.valorConstr = valorConstr;
+                cl.Inserir(p);
+                ProjetoAdicionado projAdd = new ProjetoAdicionado();
+                this.Close();
+                projAdd.Show();
+
+            }
         }
     }
-}
+

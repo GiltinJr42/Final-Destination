@@ -69,6 +69,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ClienteAdicionado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FaturaMensal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,6 +103,9 @@
     <Compile Include="CadastrarProjeto.xaml.cs">
       <DependentUpon>CadastrarProjeto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ClienteAdicionado.xaml.cs">
+      <DependentUpon>ClienteAdicionado.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FaturaMensal.xaml.cs">
       <DependentUpon>FaturaMensal.xaml</DependentUpon>
     </Compile>
@@ -115,8 +122,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ProjetoAdicionado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProjetoAdicionado.xaml.cs">
+      <DependentUpon>ProjetoAdicionado.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

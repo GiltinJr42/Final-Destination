@@ -15,7 +15,7 @@
         mc:Ignorable="d"
         Title="CadastrarCliente" Height="285.648" Width="288.917">
     <Grid>
-        <GroupBox x:Name="groupBox" Header="" Margin="10">
+        <GroupBox x:Name="groupBox" Header="Cadastrar novo cliente" Margin="10">
             <Grid Margin="0,0,-2,0">
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="16,10,0,0" TextWrapping="Wrap" Text="Usuário:" VerticalAlignment="Top"/>
                 <TextBox x:Name="NomeCliente" Height="23" Margin="70,6,16,0" TextWrapping="Wrap" Text="AnaLigia" VerticalAlignment="Top" />
@@ -23,9 +23,9 @@
                 <PasswordBox x:Name="SenhaCliente" Password="Senha" Height="23" Margin="70,35,16,0" VerticalAlignment="Top" />
                 <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="16,75,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment"/>
                 <TextBox x:Name="EmailCliente" Height="23" Margin="70,68,16,0" TextWrapping="Wrap" Text="@email.com" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment" />
-                <Button x:Name="ButtonCadastrarCliente" Content="Cadastrar cliente" Margin="16,0,16,10" VerticalAlignment="Bottom" Click="Cads" d:LayoutOverrides="VerticalAlignment" Height="31" Style="{DynamicResource MaterialDesignRaisedAccentButton}"/>
+                <Button x:Name="ButtonCadastrarCliente" Content="Cadastrar cliente" Margin="16,0,16,10" VerticalAlignment="Bottom" Click="Cads" d:LayoutOverrides="VerticalAlignment" Height="31" Style="{DynamicResource MaterialDesignRaisedDarkButton}"/>
 
-                <Button x:Name="AdicionarIcone" Content="Adicionar Ícone" Margin="16,0,16,55" VerticalAlignment="Bottom" Height="23" RenderTransformOrigin="0.493,1.478" materialDesign:ColorZoneAssist.Mode="PrimaryLight"/>
+                <Button x:Name="AdicionarIcone" Content="Adicionar Ícone" Margin="16,0,16,55" VerticalAlignment="Bottom" Height="23" RenderTransformOrigin="0.493,1.478" Style="{DynamicResource MaterialDesignRaisedLightButton}"/>
             </Grid>
         </GroupBox>
 

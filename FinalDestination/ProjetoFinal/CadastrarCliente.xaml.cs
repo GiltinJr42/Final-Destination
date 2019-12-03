@@ -36,7 +36,10 @@ namespace ProjetoFinal
 
             p.Nome = n; p.senha = s; p.Email = m;
             cl.Inserir(p);
+            ClienteAdicionado clientAdd = new ClienteAdicionado();
             this.Close();
+            clientAdd.Show();
+           
         }
     }
 }

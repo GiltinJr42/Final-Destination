@@ -13,34 +13,32 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
-        Title="CadastrarProjeto" Height="519.5" Width="661.595">
+        Title="CadastrarProjeto" Height="493.5" Width="543.595">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <GroupBox x:Name="groupBox" Header="" Margin="69,20,20,20">
+        <GroupBox x:Name="groupBox" Header="Cadastrar um novo projeto" Margin="10">
             <Grid Margin="10,10,-2,4">
-                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="Nome do Projeto: " VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox" Height="23" Margin="10,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260"/>
-                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="10,47,0,0" TextWrapping="Wrap" Text="Sinopse Curta do Projeto:" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox_Copy" Height="84" Margin="10,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="261"/>
-                <TextBlock x:Name="textBlock_Copy1" Margin="10,157,464,0" TextWrapping="Wrap" Text="Endereço:" VerticalAlignment="Top"/>
-                <CheckBox x:Name="checkBox" Content="CheckBox" HorizontalAlignment="Left" Margin="-311,0,0,131" VerticalAlignment="Bottom"/>
-                <CheckBox x:Name="checkBox_Copy" Content="CheckBox" Margin="-175,0,0,131" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="198"/>
-                <CheckBox x:Name="checkBox_Copy1" Content="CheckBox" HorizontalAlignment="Left" Margin="-311,0,0,93" VerticalAlignment="Bottom"/>
-                <CheckBox x:Name="checkBox_Copy2" Content="CheckBox" Margin="-175,0,0,90" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="198"/>
-                <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Right" Margin="0,0,134,0" TextWrapping="Wrap" Text="Custo do Projeto:" VerticalAlignment="Top" Width="109"/>
-                <TextBox x:Name="textBox1" Height="35" Margin="296,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="215"/>
-                <CheckBox x:Name="checkBox1" Content="Éstagio 1" HorizontalAlignment="Right" Margin="0,99,168,0" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
-                <CheckBox x:Name="checkBox1_Copy" Content="Éstagio 2" HorizontalAlignment="Right" Margin="0,99,28,0" VerticalAlignment="Top"/>
-                <CheckBox x:Name="checkBox1_Copy1" Content="Éstagio 3" HorizontalAlignment="Right" Margin="0,151,169,0" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
-                <CheckBox x:Name="checkBox1_Copy2" Content="Éstagio 4" HorizontalAlignment="Right" Margin="0,151,29,0" VerticalAlignment="Top"/>
-                <TextBlock x:Name="textBlock1" HorizontalAlignment="Right" Margin="0,78,134,0" TextWrapping="Wrap" Text="Estágio do Projeto:" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" />
-                <Button x:Name="button_Copy" Content="Adicionar Imagem/Vídeo " HorizontalAlignment="Right" Margin="0,180,30,172" Width="214" Height="Auto" d:LayoutOverrides="HorizontalAlignment"/>
-                <Button x:Name="button_Copy1" Content="Adicionar Projeto" Margin="0,0,30,99" Height="48" HorizontalAlignment="Right" Width="214" VerticalAlignment="Bottom"/>
-                <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,240,0,0" TextWrapping="Wrap" Text="Custo de Construção do Projeto:" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox_Copy2" Height="49" Margin="10,0,0,154" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="261"/>
-                <TextBox x:Name="textBox_Copy1" Height="23" Margin="10,0,0,99" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="261" d:LayoutOverrides="VerticalAlignment"/>
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Nome do Projeto: " VerticalAlignment="Top"/>
+                <TextBox x:Name="NomeProjeto" Height="23" Margin="0,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="242" d:LayoutOverrides="HorizontalAlignment"/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="1,51,0,0" TextWrapping="Wrap" Text="Sinopse Curta do Projeto:" VerticalAlignment="Top"/>
+                <TextBox x:Name="SinopseProjeto" Margin="-2,67,0,0" TextWrapping="Wrap" Text="" HorizontalAlignment="Left" Width="244" d:LayoutOverrides="HorizontalAlignment" Height="97" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock_Copy1" Margin="1,174,422,0" TextWrapping="Wrap" Text="Endereço:" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment"/>
+                <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Right" Margin="0,-3,116,0" TextWrapping="Wrap" Text="Custo do Projeto:" VerticalAlignment="Top" Width="109"/>
+                <TextBox x:Name="PrecoProjeto" Height="30" Margin="266,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="215"/>
+                <CheckBox x:Name="checkBox1" Content="Éstagio 1" HorizontalAlignment="Right" Margin="0,179,150,177" d:LayoutOverrides="HorizontalAlignment"/>
+                <CheckBox x:Name="checkBox1_Copy" Content="Éstagio 2" HorizontalAlignment="Right" Margin="0,179,10,177"/>
+                <CheckBox x:Name="checkBox1_Copy1" Content="Éstagio 3" HorizontalAlignment="Right" Margin="0,212,151,0" d:LayoutOverrides="HorizontalAlignment" VerticalAlignment="Top" Height="21"/>
+                <CheckBox x:Name="checkBox1_Copy2" Content="Éstagio 4" HorizontalAlignment="Right" Margin="0,212,11,0" VerticalAlignment="Top" Height="21"/>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Right" Margin="0,158,117,0" TextWrapping="Wrap" Text="Estágio do Projeto:" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" />
+                <Button x:Name="button_Copy" Content="Adicionar Imagem/Vídeo " HorizontalAlignment="Right" Margin="0,0,11,78" Width="214" Height="48" VerticalAlignment="Bottom" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment" Style="{DynamicResource MaterialDesignRaisedLightButton}"/>
+                <Button x:Name="AddProjetoButton" Content="Adicionar Projeto" Margin="0,0,11,0" Height="53" VerticalAlignment="Bottom" Style="{DynamicResource MaterialDesignRaisedDarkButton}" d:LayoutOverrides="VerticalAlignment" Click="AddProjetoButton_Click"/>
+                <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="-2,259,0,0" TextWrapping="Wrap" Text="Custo de Construção do Projeto:" VerticalAlignment="Top"/>
+                <TextBox x:Name="EnderecoProjeto" Height="49" Margin="1,0,0,126" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="241" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
+                <TextBox x:Name="PrecoDeConstrucaoProjeto" Height="23" Margin="-2,0,0,74" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="244" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
+                <TextBox x:Name="LinksGoogleDrive" Height="74" Margin="266,79,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="215"/>
+                <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Right" Margin="0,58,11,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211"><Run Text="LInks Google Drive ("/><Run Text="Use Return):"/></TextBlock>
             </Grid>
         </GroupBox>
 
