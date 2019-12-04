@@ -50,9 +50,12 @@ namespace ProjetoFinal
            
 
         }
-        private void OKProjetoADD_Click(object sender, RoutedEventArgs e)
+        private void AddImagemOpenWindow_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            IconeClienteAdicionado IconeCliente = new IconeClienteAdicionado();
+            IconeCliente.Show();
+
 
         }
     }

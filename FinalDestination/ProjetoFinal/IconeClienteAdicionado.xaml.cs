@@ -11,23 +11,21 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Modelo;
-using Negocio;
-
 
 namespace ProjetoFinal
 {
     /// <summary>
-    /// Lógica interna para ListarClientes.xaml
+    /// Lógica interna para IconeClienteAdicionado.xaml
     /// </summary>
-    public partial class ListarClientes : Window
+    public partial class IconeClienteAdicionado : Window
     {
-        public ListarClientes()
+        public IconeClienteAdicionado()
         {
             InitializeComponent();
-            dataGridClientes.ItemsSource = n.Listar();
         }
-        NCliente n = new NCliente();
-        
+        private void OKProjetoADD_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

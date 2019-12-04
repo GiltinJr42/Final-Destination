@@ -13,8 +13,26 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
-        Title="ListarClientes" Height="450" Width="468.868">
+        Title="ListarClientes" Height="606.3" Width="571.868">
     <Grid>
-        
+        <GroupBox x:Name="groupBox" Header="GroupBox" Margin="10">
+            <Grid Margin="5,5,5,5" Width="506">
+                <DataGrid Name="dataGridClientes"
+            AutoGenerateColumns="False"
+            SelectionUnit="FullRow"
+            SelectionMode="Extended"
+            CanUserReorderColumns="True"
+            CanUserResizeRows="True"
+            Margin="5,5,5,5">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Nome}" Header="Nome do cliente" Width="Auto" CanUserResize="True"/>
+                        <DataGridTextColumn Binding="{Binding Fone}"  Header="Telefone" Width="Auto" CanUserResize="True"/>
+                        <DataGridHyperlinkColumn Binding="{Binding Email}" Header="E-mail" Width="Auto" CanUserResize="True"/>
+                        <DataGridTextColumn Binding="{Binding }"  Header="Telefone" Width="Auto" CanUserResize="True"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </GroupBox>
+
     </Grid>
 </Window>

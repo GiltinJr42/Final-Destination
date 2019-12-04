@@ -18,7 +18,7 @@
         <GroupBox x:Name="groupBox" Header="" Margin="10,10,10,11">
             <Grid Margin="0,0,0,1" Width="209">
                 <Button x:Name="OkClienteADD" Content="OK" Margin="14,27,14,0" RenderTransformOrigin="-0.135,-1.554" Click="OKClienteADD_Click"/>
-                <TextBlock x:Name="textBlock" Margin="13,6,4,0" TextWrapping="Wrap" Text="Cliente adicionado com sucesso" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock" Margin="13,6,4,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Cliente adicionado com sucesso"/><Run Text="!"/></TextBlock>
             </Grid>
         </GroupBox>
 

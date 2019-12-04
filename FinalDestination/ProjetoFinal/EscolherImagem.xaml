@@ -15,7 +15,7 @@
                 <Grid Margin="10">
                     <Button x:Name="BtnLoadFromFile" Content="Adicionar Icone ao cliente" VerticalAlignment="Top" d:LayoutOverrides="Height" Click="BtnLoadFromFile_Click"/>
                     <Image x:Name="imgDynamic" Margin="0,49,0,75"/>
-                    <Button x:Name="button" Content="Adicionar Imagem" Margin="10,0,10,10" VerticalAlignment="Bottom" d:LayoutOverrides="Height"/>
+                    <Button x:Name="AddImagemOpenWindow" Content="Adicionar Imagem" Margin="10,0,10,10" VerticalAlignment="Bottom" d:LayoutOverrides="Height" Click="AddImagemOpenWindow_Click"/>
 
                 </Grid>
             </GroupBox>

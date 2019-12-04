@@ -4,17 +4,38 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoFinal"
-        mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
-        Title="ListarProjetos" Height="450" Width="800">
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        mc:Ignorable="d"
+        Title="ListarClientes" Height="606.3" Width="764.494">
     <Grid>
-        
+        <GroupBox x:Name="groupBox" Header="GroupBox" Margin="10">
+            <Grid Margin="0,0,0,-2" Width="638">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="41*"/>
+                    <RowDefinition Height="60*"/>
+                </Grid.RowDefinitions>
+                <DataGrid Name="dataGridClientes"
+            AutoGenerateColumns="False"
+            SelectionUnit="FullRow"
+            SelectionMode="Extended"
+            CanUserReorderColumns="True"
+            CanUserResizeRows="True" Grid.RowSpan="2">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Nome}" Header="Nome do Projeto" Width="Auto" CanUserResize="True"/>
+                        <DataGridTextColumn Binding="{Binding Fone}"  Header="Endereço do Projeto" Width="Auto" CanUserResize="True"/>
+                        <DataGridHyperlinkColumn Binding="{Binding Email}" Header="E-mail" Width="Auto" CanUserResize="True"/>
+                        <DataGridTextColumn Binding="{Binding }"  Header="Telefone" Width="Auto" CanUserResize="True"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </GroupBox>
+
     </Grid>
 </Window>

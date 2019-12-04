@@ -11,7 +11,7 @@ namespace Modelo
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Email{ get; set; }
-        public string fone { get; set; }
+        public string Fone { get; set; }
         public string senha { get; set; }
         public string foto { get; set; }
         public int Tipo { get; set; }

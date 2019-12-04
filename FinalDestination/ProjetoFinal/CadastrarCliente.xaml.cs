@@ -35,7 +35,7 @@ namespace ProjetoFinal
             string t = FoneCliente.Text;
             Pessoa p = new Pessoa();
 
-            p.Nome = n; p.senha = s; p.Email = m; p.fone = t;
+            p.Nome = n; p.senha = s; p.Email = m; p.Fone = t;
             cl.Inserir(p);
             ClienteAdicionado clientAdd = new ClienteAdicionado();
 
