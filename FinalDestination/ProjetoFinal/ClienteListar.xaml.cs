@@ -28,6 +28,10 @@ namespace ProjetoFinal
             dataGridClientes.ItemsSource = n.Listar();
         }
         NCliente n = new NCliente();
-        
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

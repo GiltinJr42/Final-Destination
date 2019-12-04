@@ -18,30 +18,61 @@ namespace Negocio
             clientes = p.Open();
             return clientes;
         }
+   
+
+        public List<Pessoa> Pesquisar(string nome)
+        {
+            PCliente p = new PCliente();
+            List<Pessoa> cs = p.Open().OrderBy(c => c.Nome).ToList();
+            List<Pessoa> r = new List<Pessoa>();
+            foreach (Pessoa c in cs)
+                if (c.Nome.StartsWith(nome)) r.Add(c);
+            return r;
+        }
+        public List<Pessoa> Select()
+        {
+            PCliente p = new PCliente();
+            return p.Open().OrderBy(c => c.Nome).ToList();
+        }
         public void Inserir(Pessoa c)
         {
-            clientes = p.Open();
-            clientes.Add(c);
-            p.Save(clientes);
-        }
-        public void Atualizar(Pessoa c)
-        {
-            clientes = p.Open();
-            for(int i = 0; i < clientes.Count; i++)
-            {
-                if(clientes[i].Id == c.Id)
+            PCliente p = new PCliente();
+            List<Pessoa> cs = p.Open();
+            int m = 0;
+            foreach (Pessoa x in cs) if (x.Id > m)
                 {
-                    clientes[i] = c;
+                    m = x.Id;
                 }
-            }
-            p.Save(clientes);
+            c.Id = m + 1;
+            cs.Add(c);
+            p.Save(cs);
         }
-        public void Excluir(Pessoa a)
+        public void Update(Pessoa c)
         {
-            clientes = p.Open();
-            clientes.RemoveAt(clientes.IndexOf(a));
-            p.Save(clientes);
+            PCliente p = new PCliente();
+            List<Pessoa> cs = p.Open();
+            for (int i = 0; i < cs.Count; i++)
+                if (cs[i].Id == c.Id)
+                {
+                    cs.RemoveAt(i);
+                    break;
+                }
+            cs.Add(c);
+            p.Save(cs);
         }
-        
+        public void Delete(Pessoa c)
+        {
+            PCliente p = new PCliente();
+            List<Pessoa> cs = p.Open();
+            for (int i = 0; i < cs.Count; i++)
+                if (cs[i].Id == c.Id)
+                {
+                    cs.RemoveAt(i);
+                    break;
+                }
+            p.Save(cs);
+        }
+
+
     }
 }

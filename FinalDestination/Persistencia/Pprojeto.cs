@@ -32,12 +32,20 @@ namespace Persistencia
             }
             return cs;
         }
-        public void Save(List<Projeto> cs)
+        public void Save(List<Pprojeto> cs)
         {
-            XmlSerializer x = new XmlSerializer(typeof(List<Projeto>));
-            StreamWriter f = new StreamWriter(arquivo, false, Encoding.Default);
-            x.Serialize(f, cs);
-            f.Close();
+            StreamWriter f = null;
+            try
+            {
+                XmlSerializer x = new XmlSerializer(typeof(List<Projeto>));
+                f = new StreamWriter(arquivo, false, Encoding.Default);
+                x.Serialize(f, cs);
+            }
+            finally
+            {
+                if (f != null) f.Close();
+            }
+
         }
     }
 }

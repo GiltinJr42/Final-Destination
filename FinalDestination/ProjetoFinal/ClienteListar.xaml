@@ -16,14 +16,14 @@
         Title="ListarClientes" Height="606.3" Width="571.868">
     <Grid>
         <GroupBox x:Name="groupBox" Header="GroupBox" Margin="10">
-            <Grid Margin="5,5,5,5" Width="506">
+            <Grid Margin="0,52,0,5" Width="506">
                 <DataGrid Name="dataGridClientes"
             AutoGenerateColumns="False"
             SelectionUnit="FullRow"
             SelectionMode="Extended"
             CanUserReorderColumns="True"
             CanUserResizeRows="True"
-            Margin="5,5,5,5">
+            Margin="0,0,0,5">
                     <DataGrid.Columns>
                         <DataGridTextColumn Binding="{Binding Nome}" Header="Nome do cliente" Width="Auto" CanUserResize="True"/>
                         <DataGridTextColumn Binding="{Binding Fone}"  Header="Telefone" Width="Auto" CanUserResize="True"/>
@@ -33,6 +33,9 @@
                 </DataGrid>
             </Grid>
         </GroupBox>
+        <Button x:Name="button" Content="Excluir Cliente" HorizontalAlignment="Left" Margin="27,59,0,0" VerticalAlignment="Top" Width="157" d:LayoutOverrides="Height" RenderTransformOrigin="0.28,0.266" Click="button_Click"/>
+        <Button x:Name="button1" Content="Editar CLiente" Margin="202,59,204,0" VerticalAlignment="Top" d:LayoutOverrides="Height" Width="157"/>
+        <Button x:Name="button2" Content="Pesquisar Cliente" Margin="0,59,30,0" VerticalAlignment="Top" d:LayoutOverrides="Height" HorizontalAlignment="Right" Width="157"/>
 
     </Grid>
 </Window>

@@ -32,6 +32,7 @@ namespace Persistencia
             }
             return cs;
         }
+       
         public void Save(List<Pessoa> cs)
         {
             XmlSerializer x = new XmlSerializer(typeof(List<Pessoa>));
