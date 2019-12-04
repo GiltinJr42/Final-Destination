@@ -29,8 +29,6 @@ namespace ProjetoFinal
             if (usuario == "Admin") r = senha == "123";
             return r;
         }
-        public string usuario { get => txtUsuario.Text; }
-        public string senha { get => txtSenha.Password; }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {

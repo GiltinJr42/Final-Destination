@@ -5,16 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoFinal"
         mc:Ignorable="d"
-        Title="EscolherImagem" Height="662" Width="502">
+        Title="EscolherImagem" Height="428.8" Width="298">
     <Grid>
-        <StackPanel>
-            <WrapPanel Margin="10" HorizontalAlignment="Center">
-                <Button Name="btnLoadFromFile" Margin="0,0,20,0" Click="BtnLoadFromFile_Click">Load from File...</Button>
-             
-            </WrapPanel>
-            <Image Name="imgDynamic" Margin="10"  />
-            
-        </StackPanel>
+
+        <Grid Height="224">
+
+
+            <GroupBox x:Name="groupbox" Header="Pegar Icone do computador" Margin="0,-88">
+                <Grid Margin="10">
+                    <Button x:Name="BtnLoadFromFile" Content="Adicionar Icone ao cliente" VerticalAlignment="Top" d:LayoutOverrides="Height" Click="BtnLoadFromFile_Click"/>
+                    <Image x:Name="imgDynamic" Margin="0,49,0,75"/>
+                    <Button x:Name="button" Content="Adicionar Imagem" Margin="10,0,10,10" VerticalAlignment="Bottom" d:LayoutOverrides="Height"/>
+
+                </Grid>
+            </GroupBox>
+
+
+        </Grid>
+
+
 
     </Grid>
 </Window>

@@ -27,7 +27,7 @@
                 <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="16,98,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top"/>
                 <TextBox x:Name="EmailCliente" Height="23" Margin="70,94,16,0" TextWrapping="Wrap" Text="@email.com" VerticalAlignment="Top" />
                 <Button x:Name="ButtonCadastrarCliente" Content="Cadastrar cliente" Margin="16,0,16,20" VerticalAlignment="Bottom" Click="Cads" d:LayoutOverrides="VerticalAlignment" Height="31" Style="{DynamicResource MaterialDesignRaisedDarkButton}"/>
-                <Button x:Name="AdicionarIcone" Content="Adicionar Ícone" Margin="16,0,16,65" VerticalAlignment="Bottom" Height="23" RenderTransformOrigin="0.493,1.478" Style="{DynamicResource MaterialDesignRaisedLightButton}" Click="AdicionarIconeCliente_Click"/>
+                <Button x:Name="AdicionarIcone" Content="Adicionar Ícone" Margin="16,0,16,64" VerticalAlignment="Bottom" Height="23" RenderTransformOrigin="0.493,1.478" Style="{DynamicResource MaterialDesignRaisedLightButton}" Click="AdicionarIconeCliente_Click"/>
                 <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="16,70,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
                 <PasswordBox x:Name="SenhaCliente_copy" Password="Senha" Height="23" Margin="70,66,16,0" VerticalAlignment="Top" />
                 <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="16,0,0,106" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="57" d:LayoutOverrides="VerticalAlignment"><Run Text="Telefon"/><Run Text="e:"/></TextBlock>
