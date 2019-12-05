@@ -52,10 +52,7 @@ namespace ProjetoFinal
             }
             else;
             {
-                n.Delete((Pessoa)dataGridClientes.SelectedItem);
-                n.Delete(c);
-                dataGridClientes.ItemsSource = null;
-                dataGridClientes.ItemsSource = n.Listar();
+               
             }
 
         }

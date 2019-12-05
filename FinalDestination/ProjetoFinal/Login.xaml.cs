@@ -26,8 +26,15 @@ namespace ProjetoFinal
         public static bool VerificarSenha(string usuario, string senha)
         {
             bool r = false;
-            if (usuario == "Admin") r = senha == "123";
-            return r;
+            if (usuario == "Admin")
+            {
+                r = senha == "123";
+            }
+            if (usuario == "Diavolo")
+            {
+                r = senha == "results";
+            }
+                return r;
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
