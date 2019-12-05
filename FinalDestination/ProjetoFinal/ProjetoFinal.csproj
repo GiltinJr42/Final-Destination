@@ -188,6 +188,10 @@
       <Project>{3a8bd57b-9e5a-48c5-be24-41e98bc382bd}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Persistencia\Persistencia.csproj">
+      <Project>{512a9d27-d3a0-4f07-bbab-985a01c9d328}</Project>
+      <Name>Persistencia</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

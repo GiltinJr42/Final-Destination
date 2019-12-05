@@ -13,27 +13,28 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
-        Title="CadastrarCliente" Height="354.648" Width="289.917">
+        Title="CadastrarCliente" Height="489.873" Width="289.917">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <GroupBox x:Name="groupBox" Header="Cadastrar novo cliente" Margin="10">
             <Grid Margin="0,0,-2,0">
-                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="16,10,0,0" TextWrapping="Wrap" Text="Usuário:" VerticalAlignment="Top"/>
-                <TextBox x:Name="NomeCliente" Height="23" Margin="70,6,16,0" TextWrapping="Wrap" Text="AnaLigia" VerticalAlignment="Top" />
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="16,8,0,0" TextWrapping="Wrap" Text="Usuário:" VerticalAlignment="Top" Height="26"/>
+                <TextBox x:Name="NomeCliente" Height="26" Margin="70,0,16,0" TextWrapping="Wrap" Text="AnaLigia" VerticalAlignment="Top" />
                 <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="16,39,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
-                <PasswordBox x:Name="SenhaCliente" Password="Senha" Height="23" Margin="70,35,16,0" VerticalAlignment="Top" />
-                <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="16,98,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top"/>
-                <TextBox x:Name="EmailCliente" Height="23" Margin="70,94,16,0" TextWrapping="Wrap" Text="@email.com" VerticalAlignment="Top" />
-                <Button x:Name="ButtonCadastrarCliente" Content="Cadastrar cliente" Margin="16,0,16,20" VerticalAlignment="Bottom" Click="Cads" d:LayoutOverrides="VerticalAlignment" Height="31" Style="{DynamicResource MaterialDesignRaisedDarkButton}"/>
-                <Button x:Name="AdicionarIcone" Content="Adicionar Ícone" Margin="16,0,16,64" VerticalAlignment="Bottom" Height="23" RenderTransformOrigin="0.493,1.478" Style="{DynamicResource MaterialDesignRaisedLightButton}" Click="AdicionarIconeCliente_Click"/>
-                <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="16,70,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
-                <PasswordBox x:Name="SenhaCliente_copy" Password="Senha" Height="23" Margin="70,66,16,0" VerticalAlignment="Top" />
-                <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="16,0,0,106" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="57" d:LayoutOverrides="VerticalAlignment"><Run Text="Telefon"/><Run Text="e:"/></TextBlock>
-                <TextBox x:Name="FoneCliente" Margin="70,122,16,101" TextWrapping="Wrap" Text="( )" />
+                <PasswordBox x:Name="SenhaCliente" Password="Senha" Height="26" Margin="70,29,16,0" VerticalAlignment="Top" />
+                <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="16,100,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top" Height="23"/>
+                <TextBox x:Name="EmailCliente" Height="26" Margin="70,94,16,0" TextWrapping="Wrap" Text="@email.com" VerticalAlignment="Top" />
+                <Button x:Name="ButtonCadastrarCliente" Content="Cadastrar cliente" Margin="16,0,16,16" VerticalAlignment="Bottom" Click="Cads" d:LayoutOverrides="VerticalAlignment" Height="31" Style="{DynamicResource MaterialDesignRaisedDarkButton}"/>
+                <Button x:Name="BtnLoadFromFile" Content="Adicionar Ícone" Margin="16,0,16,62" VerticalAlignment="Bottom" Height="26" RenderTransformOrigin="0.493,1.478" Style="{DynamicResource MaterialDesignRaisedLightButton}" Click="BtnLoadFromFile_Click"/>
+                <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="16,70,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top" Height="19"/>
+                <PasswordBox x:Name="SenhaCliente_copy" Password="Senha" Height="26" Margin="70,63,16,0" VerticalAlignment="Top" />
+                <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="16,0,0,240" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="57"><Run Text="Telefon"/><Run Text="e:"/></TextBlock>
+                <TextBox x:Name="FoneCliente" Margin="70,126,16,0" TextWrapping="Wrap" Text="( )" Height="26" VerticalAlignment="Top" />
+                <Image x:Name="imgDynamic" Margin="46,167,47,100"/>
             </Grid>
         </GroupBox>
-      
+
     </Grid>
 </Window>

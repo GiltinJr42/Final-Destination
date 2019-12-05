@@ -5,33 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoFinal"
         mc:Ignorable="d"
-        Title="ClienteListar" Height="450" Width="624.5">
+        Title="ClienteListar" Height="469.5" Width="663.5">
     <Grid>
         <GroupBox x:Name="groupBox" Header="Listagem de clientes" Margin="10">
-            <Grid Margin="0,0,0,5" Width="586">
+            <Grid Margin="0,0,0,5" Width="610">
                 <DataGrid Name="dataGridClientes"
             AutoGenerateColumns="False"
             SelectionUnit="FullRow"
             SelectionMode="Extended"
             CanUserReorderColumns="True"
             CanUserResizeRows="True"
-            Margin="0,46,10,5" SelectionChanged="dataGridClientes_SelectionChanged">
+            Margin="0,86,0,5" SelectionChanged="dataGridClientes_SelectionChanged">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Nome}" Header="Nome do cliente" Width="160" CanUserResize="True"/>
-                        <DataGridTextColumn Binding="{Binding Fone}"  Header="Telefone" Width="160" CanUserResize="True"/>
-                        <DataGridHyperlinkColumn Binding="{Binding Email}" Header="E-mail" Width="160" CanUserResize="True"/>
-                        <DataGridTemplateColumn Header="Za hando">
+                        <DataGridTextColumn Binding="{Binding Nome}" Header="Nome" Width="120" CanUserResize="True"/>
+                        <DataGridTextColumn Binding="{Binding Fone}"  Header="Telefone" Width="120" CanUserResize="True"/>
+                        <DataGridHyperlinkColumn Binding="{Binding Email}" Header="E-mail" Width="120" CanUserResize="True"/>
+                     
+                        <DataGridTemplateColumn Header="Icone" Width="120">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button x:Name="DeletarCliente" Content="Deletar"></Button>
-
+                                    <Button x:Name="MostrarIcone" Content="Icone" Click="MostrarIcone_Click" Style="{DynamicResource MaterialDesignFlatButton}"></Button>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Za hando" Width="120">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button x:Name="DeletarCliente" Content="Deletar" Click="DeletarCliente_Click"></Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        
                     </DataGrid.Columns>
                 </DataGrid>
-                <Button x:Name="button" Content="Pesquisar Clientes" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="207" d:LayoutOverrides="Height"/>
-                <Button x:Name="button_Copy" Content="Editar Cliente" Margin="356,9,10,0" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
+                
+                <Button x:Name="button" Content="Pesquisar Clientes" HorizontalAlignment="Left" Margin="0,28,0,0" VerticalAlignment="Top" Width="220" d:LayoutOverrides="Height"/>
+                <Button x:Name="button_Copy" Content="Editar Cliente" Margin="390,28,0,0" VerticalAlignment="Top" d:LayoutOverrides="Height" Width="220" RenderTransformOrigin="0.493,1.156"/>
+                <Image x:Name="Foto" Margin="225,0,240,0" Height="81" VerticalAlignment="Top"/>
+                
             </Grid>
         </GroupBox>
         <Grid HorizontalAlignment="Left" Margin="-114,137,0,182" Width="100"/>
