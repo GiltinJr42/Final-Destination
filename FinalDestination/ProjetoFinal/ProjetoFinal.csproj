@@ -64,6 +64,9 @@
     <Compile Include="ClienteEditar.xaml.cs">
       <DependentUpon>ClienteEditar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ClienteListar.xaml.cs">
+      <DependentUpon>ClienteListar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IconeClienteAdicionado.xaml.cs">
       <DependentUpon>IconeClienteAdicionado.xaml</DependentUpon>
     </Compile>
@@ -84,6 +87,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ClienteListar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EscolherImagem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -93,10 +100,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="IconeClienteAdicionado.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ClienteListar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -130,9 +133,6 @@
     </Compile>
     <Compile Include="FaturaMensal.xaml.cs">
       <DependentUpon>FaturaMensal.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ClienteListar.xaml.cs">
-      <DependentUpon>ClienteListar.xaml</DependentUpon>
     </Compile>
     <Compile Include="ListarProjetos.xaml.cs">
       <DependentUpon>ListarProjetos.xaml</DependentUpon>

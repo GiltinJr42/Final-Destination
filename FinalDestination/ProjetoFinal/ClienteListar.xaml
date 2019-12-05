@@ -1,41 +1,40 @@
-﻿<Window x:Class="ProjetoFinal.ListarClientes"
+﻿<Window x:Class="ProjetoFinal.ClienteListar"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoFinal"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        TextElement.FontWeight="Regular"
-        TextElement.FontSize="13"
-        TextOptions.TextFormattingMode="Ideal"
-        TextOptions.TextRenderingMode="Auto"
-        Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
-        Title="ListarClientes" Height="606.3" Width="571.868">
+        Title="ClienteListar" Height="450" Width="624.5">
     <Grid>
-        <GroupBox x:Name="groupBox" Header="GroupBox" Margin="10">
-            <Grid Margin="0,52,0,5" Width="506">
+        <GroupBox x:Name="groupBox" Header="Listagem de clientes" Margin="10">
+            <Grid Margin="0,0,0,5" Width="586">
                 <DataGrid Name="dataGridClientes"
             AutoGenerateColumns="False"
             SelectionUnit="FullRow"
             SelectionMode="Extended"
             CanUserReorderColumns="True"
             CanUserResizeRows="True"
-            Margin="0,0,0,5">
+            Margin="0,46,10,5" SelectionChanged="dataGridClientes_SelectionChanged">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Nome}" Header="Nome do cliente" Width="Auto" CanUserResize="True"/>
-                        <DataGridTextColumn Binding="{Binding Fone}"  Header="Telefone" Width="Auto" CanUserResize="True"/>
-                        <DataGridHyperlinkColumn Binding="{Binding Email}" Header="E-mail" Width="Auto" CanUserResize="True"/>
-                        <DataGridTextColumn Binding="{Binding }"  Header="Telefone" Width="Auto" CanUserResize="True"/>
+                        <DataGridTextColumn Binding="{Binding Nome}" Header="Nome do cliente" Width="160" CanUserResize="True"/>
+                        <DataGridTextColumn Binding="{Binding Fone}"  Header="Telefone" Width="160" CanUserResize="True"/>
+                        <DataGridHyperlinkColumn Binding="{Binding Email}" Header="E-mail" Width="160" CanUserResize="True"/>
+                        <DataGridTemplateColumn Header="Za hando">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button x:Name="DeletarCliente" Content="Deletar"></Button>
+
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
                     </DataGrid.Columns>
                 </DataGrid>
+                <Button x:Name="button" Content="Pesquisar Clientes" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="207" d:LayoutOverrides="Height"/>
+                <Button x:Name="button_Copy" Content="Editar Cliente" Margin="356,9,10,0" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
             </Grid>
         </GroupBox>
-        <Button x:Name="button" Content="Excluir Cliente" HorizontalAlignment="Left" Margin="27,59,0,0" VerticalAlignment="Top" Width="157" d:LayoutOverrides="Height" RenderTransformOrigin="0.28,0.266" Click="button_Click"/>
-        <Button x:Name="button1" Content="Editar CLiente" Margin="202,59,204,0" VerticalAlignment="Top" d:LayoutOverrides="Height" Width="157"/>
-        <Button x:Name="button2" Content="Pesquisar Cliente" Margin="0,59,30,0" VerticalAlignment="Top" d:LayoutOverrides="Height" HorizontalAlignment="Right" Width="157"/>
+        <Grid HorizontalAlignment="Left" Margin="-114,137,0,182" Width="100"/>
 
     </Grid>
 </Window>

@@ -11,25 +11,20 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Modelo;
-using Negocio;
-
 
 namespace ProjetoFinal
 {
     /// <summary>
-    /// Lógica interna para ListarClientes.xaml
+    /// Lógica interna para ClienteListar.xaml
     /// </summary>
-    public partial class ListarClientes : Window
+    public partial class ClienteListar : Window
     {
-        public ListarClientes()
+        public ClienteListar()
         {
             InitializeComponent();
-            dataGridClientes.ItemsSource = n.Listar();
         }
-        NCliente n = new NCliente();
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void dataGridClientes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

@@ -47,5 +47,10 @@ namespace Persistencia
             }
 
         }
+
+        public void Save(List<Projeto> projetos)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

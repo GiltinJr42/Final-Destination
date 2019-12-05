@@ -55,7 +55,7 @@ namespace ProjetoFinal
         }
         private void ListarClientes_Click(object sender, RoutedEventArgs e)
         {
-            ListarClientes listClient = new ListarClientes();
+            ClienteListar listClient = new ClienteListar();
             listClient.Show();
 
         }
