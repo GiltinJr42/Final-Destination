@@ -24,13 +24,19 @@ namespace ProjetoFinal
     /// <summary>
     /// Lógica interna para ClienteListar.xaml
     /// </summary>
+    /// 
     public partial class ClienteListar : Window
     {
+        private string foto = string.Empty;
+
         NCliente n = new NCliente();
+        private Pessoa c;
+
         public ClienteListar()
         {
             InitializeComponent();
             dataGridClientes.ItemsSource = n.Listar();
+
         }
 
         private void dataGridClientes_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -52,23 +58,87 @@ namespace ProjetoFinal
             }
             else;
             {
-               
+
             }
 
         }
+
 
         private void MostrarIcone_Click(object sender, RoutedEventArgs e)
         {
             if (dataGridClientes.SelectedItem != null)
             {
                 Pessoa u = dataGridClientes.SelectedItem as Pessoa;
+
                 byte[] b = Convert.FromBase64String(u.foto);
+
                 BitmapImage bi = new BitmapImage();
                 bi.BeginInit();
                 bi.StreamSource = new MemoryStream(b);
                 bi.EndInit();
-                Foto.Source = bi;
+
+                fotoIcone.Source = bi;
             }
+            else
+            {
+
+            }
+        }
+
+        private void AttIcone_Click(object sender, RoutedEventArgs e)
+        {
+
+            OpenFileDialog w = new OpenFileDialog();
+            w.Filter = "Arquivos Jpg|*.jpg|*.PNG|*.png|*.Png|*.JPEG|*.jpeg|*.Jpeg";
+            if (w.ShowDialog().Value)
+            {
+                byte[] b = File.ReadAllBytes(w.FileName);
+                foto = Convert.ToBase64String(b);
+
+                BitmapImage bi = new BitmapImage();
+                bi.BeginInit();
+                bi.StreamSource = new MemoryStream(b);
+                bi.EndInit();
+
+                fotoIcone.Source = bi;
+            }
+        }
+        private void Insert_Click(object sender, RoutedEventArgs e)
+        {
+            Pessoa c = new Pessoa();
+            PCliente p = new PCliente();
+            List<Pessoa> cs = p.Open();
+            string n = NomeTxt.Text;
+            string m = EmailTxt.Text;
+            string t = FoneTxt.Text;
+            for (int i = 0; i < cs.Count; i++)
+                if (cs[i].Id == c.Id)
+                {
+                    cs.RemoveAt(i);
+                    break;
+                }
+            cs.Add(c);
+            p.Save(cs);
+
+        }
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+            Pessoa m = new Pessoa();
+            m.Nome = NomeTxt.Text;
+            m.Fone = FoneTxt.Text;
+            m.Email = EmailTxt.Text;
+
+
+            NCliente n = new NCliente();
+            n.Update(m);
+
+        }
+        private void SelectClick(object sender, RoutedEventArgs e)
+        {
+            NCliente n = new NCliente();
+            dataGridClientes.ItemsSource = null;
+            dataGridClientes.ItemsSource = n.Select();
+
         }
     }
 }

@@ -93,11 +93,7 @@ namespace ProjetoFinal
 
 
         }
-        private void AdicionarIconeCliente_Click(object sender, RoutedEventArgs e)
-        {
-            EscolherImagem escImg = new EscolherImagem();
-            escImg.Show();
-
-        }
+    
+        
     }
 }

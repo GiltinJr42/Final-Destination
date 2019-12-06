@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Negocio;
+using Modelo;
+
 
 namespace ProjetoFinal
 {
@@ -20,9 +23,11 @@ namespace ProjetoFinal
     /// </summary>
     public partial class MainWindow : Window
     {
+        NCliente n = new NCliente();
         public MainWindow()
         {
             InitializeComponent();
+            dataGridClientes.ItemsSource = n.Listar();
 
         }
 
