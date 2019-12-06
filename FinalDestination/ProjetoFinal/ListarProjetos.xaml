@@ -13,23 +13,23 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
-        Title="ListarClientes" Height="658.8" Width="967.782">
+        Title="ListarProjetos" Height="658.8" Width="967.782">
     <Grid>
-        <GroupBox x:Name="groupBox" Header="Listagem de clientes" Margin="10">
+        <GroupBox x:Name="groupBox" Header="Listagem de Projetos" Margin="10">
             <Grid Margin="0,0,0,0" MaxWidth="2600">
                 <DataGrid Name="dataGridProjetos"
-            AutoGenerateColumns="True"
-            SelectionUnit="FullRow"
-            SelectionMode="Extended"
-            CanUserReorderColumns="False"
-            CanUserResizeRows="True"
-            CanUserAddRows="False"
-            CanUserDeleteRows="False"
-            IsReadOnly="True"
-            Margin="0,154,0,0" SelectionChanged="dataGridClientes_SelectionChanged" HorizontalAlignment="Left" Width="922">
+                AutoGenerateColumns="True"
+                SelectionUnit="FullRow"
+                SelectionMode="Extended"
+                CanUserReorderColumns="False"
+                CanUserResizeRows="True"
+                CanUserAddRows="False"
+                CanUserDeleteRows="False"
+                IsReadOnly="True"
+                Margin="0,154,0,0" SelectionChanged="dataGridProjetos_SelectionChanged" HorizontalAlignment="Left" Width="922">
                     <DataGrid.Columns>
                         <DataGridTextColumn Binding="{Binding Nome}" Header="Nome" Width="120" CanUserResize="True"/>
-                       
+
                         <DataGridHyperlinkColumn Binding="{Binding linksDrive}" Header="Link Drive" Width="120" CanUserResize="True"/>
 
                         <DataGridTemplateColumn Header="Icone" Width="120">
@@ -49,25 +49,23 @@
                         <DataGridTemplateColumn Header="Za hando" Width="120">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button x:Name="DeletarCliente" Content="Deletar" Click="DeletarCliente_Click"></Button>
+                                    <Button x:Name="DeletarProjeto" Content="Deletar" Click="DeletarProjeto_Click"></Button>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-
-
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <Button x:Name="AtualizarCliente" Content="Atualizar Cliente" Margin="353,94,133,0" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.156" Click="Update_Click"/>
+                <Button x:Name="AtualizarProjeto" Content="Atualizar Projeto" Margin="353,106,133,0" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.156" Click="Update_Click"/>
                 <Image x:Name="fotoIcone" Margin="10,10,0,0" HorizontalAlignment="Left" Width="150" Height="116" VerticalAlignment="Top"/>
-                <TextBox x:Name="NomeTxt" HorizontalAlignment="Left" Margin="180,50,0,0" TextWrapping="Wrap" Text="Nome" Width="168" Height="22" VerticalAlignment="Top" RenderTransformOrigin="0.533,-0.386"/>
-                <TextBox x:Name="FoneTxt" Margin="353,50,316,0" TextWrapping="Wrap" Text="Telefone" Height="22" VerticalAlignment="Top"/>
-                <TextBox x:Name="EmailTxt" HorizontalAlignment="Right" Margin="0,50,133,0" TextWrapping="Wrap" Text="E-mail" Width="178" Height="22" VerticalAlignment="Top"/>
-                <Button x:Name="AtualizarIcone" Content="Novo Ícone" Margin="180,94,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.156" Style="{DynamicResource MaterialDesignRaisedLightButton}" Click="AttIcone_Click" HorizontalAlignment="Left" Width="168"/>
-
+                <TextBox x:Name="NomeTxt" HorizontalAlignment="Left" Margin="180,35,0,0" TextWrapping="Wrap" Text="Nome" Width="168" Height="22" VerticalAlignment="Top" RenderTransformOrigin="0.533,-0.386"/>
+                <TextBox x:Name="SinopseTxt" Margin="353,35,316,0" TextWrapping="Wrap" Text="Sinopse" Height="22" VerticalAlignment="Top"/>
+                <TextBox x:Name="LinksTxt" HorizontalAlignment="Right" Margin="0,35,133,0" TextWrapping="Wrap" Text="Links" Width="178" Height="22" VerticalAlignment="Top"/>
+                <Button x:Name="AtualizarIcone" Content="Novo Ícone" Margin="180,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.156" Style="{DynamicResource MaterialDesignRaisedLightButton}" Click="AttIcone_Click" HorizontalAlignment="Left" Width="168"/>
+                <TextBox x:Name="CustoProjetoTxt" HorizontalAlignment="Left" Margin="444,62,0,0" TextWrapping="Wrap" Text="Nome" Width="168" Height="22" VerticalAlignment="Top" RenderTransformOrigin="0.533,-0.386"/>
+                <TextBox x:Name="EnderecoTxt" Margin="180,62,489,0" TextWrapping="Wrap" Text="Sinopse" Height="22" VerticalAlignment="Top"/>
+                <TextBox x:Name="CustoConstrucaoTxt" HorizontalAlignment="Right" Margin="0,62,133,0" TextWrapping="Wrap" Text="Links" Width="178" Height="22" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>
-
-
     </Grid>
 </Window>

@@ -56,11 +56,6 @@ namespace ProjetoFinal
                 dataGridClientes.ItemsSource = null;
                 dataGridClientes.ItemsSource = n.Listar();
             }
-            else;
-            {
-
-            }
-
         }
 
 
@@ -79,10 +74,7 @@ namespace ProjetoFinal
 
                 fotoIcone.Source = bi;
             }
-            else
-            {
-
-            }
+            else{}
         }
 
         private void AttIcone_Click(object sender, RoutedEventArgs e)
@@ -111,15 +103,16 @@ namespace ProjetoFinal
             string n = NomeTxt.Text;
             string m = EmailTxt.Text;
             string t = FoneTxt.Text;
+
             for (int i = 0; i < cs.Count; i++)
                 if (cs[i].Id == c.Id)
                 {
                     cs.RemoveAt(i);
                     break;
                 }
+
             cs.Add(c);
             p.Save(cs);
-
         }
         private void Update_Click(object sender, RoutedEventArgs e)
         {
@@ -128,17 +121,14 @@ namespace ProjetoFinal
             m.Fone = FoneTxt.Text;
             m.Email = EmailTxt.Text;
 
-
             NCliente n = new NCliente();
             n.Update(m);
-
         }
         private void SelectClick(object sender, RoutedEventArgs e)
         {
             NCliente n = new NCliente();
             dataGridClientes.ItemsSource = null;
             dataGridClientes.ItemsSource = n.Select();
-
         }
     }
 }

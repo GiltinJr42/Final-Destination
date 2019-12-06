@@ -45,21 +45,16 @@
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                       
-
                     </DataGrid.Columns>
                 </DataGrid>
-                
+
                 <Button x:Name="AtualizarCliente" Content="Atualizar Cliente" Margin="353,94,10,0" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.156" Click="Update_Click"/>
                 <Image x:Name="fotoIcone" Margin="10,10,0,0" HorizontalAlignment="Left" Width="150" Height="116" VerticalAlignment="Top"/>
                 <TextBox x:Name="NomeTxt" HorizontalAlignment="Left" Margin="180,50,0,0" TextWrapping="Wrap" Text="Nome" Width="168" Height="22" VerticalAlignment="Top" RenderTransformOrigin="0.533,-0.386"/>
                 <TextBox x:Name="FoneTxt" Margin="353,50,175,0" TextWrapping="Wrap" Text="Telefone" Height="22" VerticalAlignment="Top"/>
                 <TextBox x:Name="EmailTxt" HorizontalAlignment="Right" Margin="0,50,10,0" TextWrapping="Wrap" Text="E-mail" Width="160" Height="22" VerticalAlignment="Top"/>
                 <Button x:Name="AtualizarIcone" Content="Novo Ícone" Margin="180,94,358,0" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.156" Style="{DynamicResource MaterialDesignRaisedLightButton}" Click="AttIcone_Click"/>
-
             </Grid>
         </GroupBox>
-
-
     </Grid>
 </Window>

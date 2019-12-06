@@ -31,6 +31,7 @@ namespace ProjetoFinal
         {
             InitializeComponent();
         }
+
         private void Cads(object sender, RoutedEventArgs e)
         {
             string n = NomeCliente.Text;
@@ -65,7 +66,6 @@ namespace ProjetoFinal
                 bi.EndInit();
 
                 imgDynamic.Source = bi;
-
             }
         }
         /*private void List_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -90,10 +90,6 @@ namespace ProjetoFinal
             this.Close();
             IconeClienteAdicionado IconeCliente = new IconeClienteAdicionado();
             IconeCliente.Show();
-
-
         }
-    
-        
     }
 }

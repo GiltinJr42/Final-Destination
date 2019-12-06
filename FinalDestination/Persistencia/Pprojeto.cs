@@ -50,7 +50,10 @@ namespace Persistencia
 
         public void Save(List<Projeto> projetos)
         {
-            throw new NotImplementedException();
+            XmlSerializer x = new XmlSerializer(typeof(List<Projeto>));
+            StreamWriter f = new StreamWriter(arquivo, false, Encoding.Default);
+            x.Serialize(f, projetos);
+            f.Close();
         }
     }
 }

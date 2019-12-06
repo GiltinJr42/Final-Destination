@@ -27,19 +27,19 @@ namespace ProjetoFinal
         public ListarProjetos()
         {
             InitializeComponent();
-            dataGridClientes.ItemsSource = n.Listar();
+            dataGridProjetos.ItemsSource = n.Listar();
         }
         private string foto = string.Empty;
 
         NProjeto n = new NProjeto();
         private Projeto c;
 
-        private void dataGridClientes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void dataGridProjetos_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
 
-        private void DeletarCliente_Click(object sender, RoutedEventArgs e)
+        private void DeletarProjeto_Click(object sender, RoutedEventArgs e)
         {
             NProjeto n = new NProjeto();
 
@@ -100,16 +100,15 @@ namespace ProjetoFinal
         }
         private void Insert_Click(object sender, RoutedEventArgs e)
         {
-            Pessoa c = new Pessoa();
+            Projeto c = new Projeto();
             Pprojeto p = new Pprojeto();
             List<Projeto> cs = p.Open();
             string n = NomeTxt.Text;
-            string e = EnderecoTxt.Text;
-            string l = linkDriveTxt.Text;
-            string s = sinopseTxt.Text;
-            string r = resumoTxt.Text;
-            double c = custoProjetoTxt.Text;
-            double d = custoConstrucaoTxt.Text;
+            string a = EnderecoTxt.Text;
+            string l = LinksTxt.Text;
+            string s = SinopseTxt.Text;
+            double m = double.Parse(CustoProjetoTxt.Text);
+            double d = double.Parse(CustoConstrucaoTxt.Text);
 
             for (int i = 0; i < cs.Count; i++)
                 if (cs[i].Id == c.Id)
@@ -117,28 +116,28 @@ namespace ProjetoFinal
                     cs.RemoveAt(i);
                     break;
                 }
+
             cs.Add(c);
             p.Save(cs);
-
         }
         private void Update_Click(object sender, RoutedEventArgs e)
         {
             Projeto m = new Projeto();
             m.Nome = NomeTxt.Text;
-            m.Fone = FoneTxt.Text;
-            m.Email = EmailTxt.Text;
-
+            m.sinopse = SinopseTxt.Text;
+            m.endereco = EnderecoTxt.Text;
+            m.linksDrive = LinksTxt.Text;
+            m.preco = double.Parse(CustoProjetoTxt.Text);
+            m.valorConstr = double.Parse(CustoConstrucaoTxt.Text);
 
             NProjeto n = new NProjeto();
             n.Update(m);
-
         }
         private void SelectClick(object sender, RoutedEventArgs e)
         {
             NProjeto n = new NProjeto();
             dataGridProjetos.ItemsSource = null;
             dataGridProjetos.ItemsSource = n.Select();
-
         }
     }
 }

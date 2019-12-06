@@ -10,7 +10,7 @@ namespace Modelo
     public class Projeto
     {
         public int Id { get; set; }
-        public string nome { get; set; }
+        public string Nome { get; set; }
         public string endereco { get; set; }
         public string sinopse { get; set; }
         public double preco { get; set; }
@@ -31,7 +31,6 @@ namespace Modelo
             this.linksDrive = linksDrive;
             this.preco = preco;
             valorConstr = valorConst;
-        }*/
-        
+        }*/   
     }
 }
