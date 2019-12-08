@@ -7,16 +7,16 @@ using Microsoft.Win32;
 
 namespace Modelo
 {
-    public class Projeto
+    public class Projeto : Pessoa
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
+        public string NomeP{ get; set; }
         public string endereco { get; set; }
         public string sinopse { get; set; }
         public double preco { get; set; }
         public double valorConstr { get; set; }
         public string linksDrive { get; set; }
-        public string foto { get; set; }
+        public string fotoP { get; set; }
 
         public List<CR> c = new List<CR>();
         public List<Arq> a = new List<Arq>();

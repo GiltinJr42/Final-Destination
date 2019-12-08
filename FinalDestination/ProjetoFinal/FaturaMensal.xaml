@@ -15,19 +15,22 @@
         mc:Ignorable="d"
         Title="FaturaMensal" Height="450" Width="414.031">
     <Grid>
-        <DataGrid Name="dataGridClientes"
-            AutoGenerateColumns="False"
-            SelectionUnit="FullRow"
-            SelectionMode="Extended"
-            CanUserReorderColumns="True"
-            CanUserResizeRows="True">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding nome}" Header="Nome do cliente"/>
-                <DataGridTextColumn Binding="{Binding fone}"  Header="Telefone"/>
-                <DataGridHyperlinkColumn Binding="{Binding email}" Header="E-mail"/>
-                <DataGridCheckBoxColumn Binding="{Binding Ativo, Mode=OneWay}" Header="Cliente Ativo"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <GroupBox Header="Fatura Mensal" >
+            <Grid Margin="5,5,5,5" >
+                <DataGrid Name="dataGridFatura"
+                AutoGenerateColumns="False"
+                SelectionUnit="FullRow"
+                SelectionMode="Extended"
+                CanUserReorderColumns="True"
+                CanUserResizeRows="True" Margin="0,10,10,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Nome}" Header="Nome do cliente"/>
+
+                        <DataGridTextColumn Binding="{Binding preco}"  Header="Preço pago"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </GroupBox>
 
 
        

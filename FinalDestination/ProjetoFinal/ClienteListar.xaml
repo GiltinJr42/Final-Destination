@@ -10,7 +10,7 @@
         <GroupBox x:Name="groupBox" Header="Listagem de clientes" Margin="10">
             <Grid Margin="0,0,0,0" MaxWidth="2600">
                 <DataGrid Name="dataGridClientes"
-            AutoGenerateColumns="True"
+            AutoGenerateColumns="False"
             SelectionUnit="FullRow"
             SelectionMode="Extended"
             CanUserReorderColumns="False"
@@ -20,7 +20,7 @@
             IsReadOnly="True"
             Margin="0,154,0,0" SelectionChanged="dataGridClientes_SelectionChanged" HorizontalAlignment="Left" Width="698">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Nome}" Header="Nome" Width="120" CanUserResize="True"/>
+                        <DataGridTextColumn Binding="{Binding NomeC}" Header="Nome" Width="120" CanUserResize="True"/>
                         <DataGridTextColumn Binding="{Binding Fone}"  Header="Telefone" Width="120" CanUserResize="True"/>
                         <DataGridHyperlinkColumn Binding="{Binding Email}" Header="E-mail" Width="120" CanUserResize="True"/>
 

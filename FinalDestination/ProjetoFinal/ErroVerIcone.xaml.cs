@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace ProjetoFinal
 {
     /// <summary>
-    /// Lógica interna para IconeClienteAdicionado.xaml
+    /// Lógica interna para ErroVerIconeProjeto.xaml
     /// </summary>
-    public partial class IconeClienteAdicionado : Window
+    public partial class ErroVerIcone : Window
     {
-        public IconeClienteAdicionado()
+        public ErroVerIcone()
         {
             InitializeComponent();
         }

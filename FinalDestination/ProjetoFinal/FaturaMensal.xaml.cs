@@ -11,6 +11,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using Modelo;
+using Negocio;
 
 namespace ProjetoFinal
 {
@@ -19,9 +24,13 @@ namespace ProjetoFinal
     /// </summary>
     public partial class FaturaMensal : Window
     {
+        NCliente n = new NCliente();
+        NProjeto p = new NProjeto();
         public FaturaMensal()
         {
             InitializeComponent();
+            dataGridFatura.ItemsSource = n.Listar();
+            dataGridFatura.ItemsSource = p.Listar();
         }
     }
 }

@@ -28,7 +28,7 @@
                 IsReadOnly="True"
                 Margin="0,154,0,0" SelectionChanged="dataGridProjetos_SelectionChanged" HorizontalAlignment="Left" Width="922">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Nome}" Header="Nome" Width="120" CanUserResize="True"/>
+                        <DataGridTextColumn Binding="{Binding NomeP}" Header="Nome" Width="120" CanUserResize="True"/>
 
                         <DataGridHyperlinkColumn Binding="{Binding linksDrive}" Header="Link Drive" Width="120" CanUserResize="True"/>
 

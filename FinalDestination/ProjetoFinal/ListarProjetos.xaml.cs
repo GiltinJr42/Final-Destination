@@ -24,12 +24,13 @@ namespace ProjetoFinal
     /// </summary>
     public partial class ListarProjetos : Window
     {
+      
         public ListarProjetos()
         {
             InitializeComponent();
             dataGridProjetos.ItemsSource = n.Listar();
         }
-        private string foto = string.Empty;
+        private string fotoP = string.Empty;
 
         NProjeto n = new NProjeto();
         private Projeto c;
@@ -47,36 +48,40 @@ namespace ProjetoFinal
             if (dataGridProjetos.SelectedItem != null)
             {
                 n.Delete((Projeto)dataGridProjetos.SelectedItem);
-                n.Delete(c);
                 dataGridProjetos.ItemsSource = null;
                 dataGridProjetos.ItemsSource = n.Listar();
             }
-            else;
+            else
             {
+                ErroExcluirProjetoNull erroExcProj = new ErroExcluirProjetoNull();
+                erroExcProj.Show();
 
             }
-
         }
 
 
         private void MostrarIcone_Click(object sender, RoutedEventArgs e)
         {
+            Projeto u = dataGridProjetos.SelectedItem as Projeto;
+
             if (dataGridProjetos.SelectedItem != null)
             {
-                Pessoa u = dataGridProjetos.SelectedItem as Pessoa;
+                if (u.fotoP != "")
+                {
+                    byte[] b = Convert.FromBase64String(u.fotoP);
 
-                byte[] b = Convert.FromBase64String(u.foto);
+                    BitmapImage bi = new BitmapImage();
+                    bi.BeginInit();
+                    bi.StreamSource = new MemoryStream(b);
+                    bi.EndInit();
 
-                BitmapImage bi = new BitmapImage();
-                bi.BeginInit();
-                bi.StreamSource = new MemoryStream(b);
-                bi.EndInit();
-
-                fotoIcone.Source = bi;
-            }
-            else
-            {
-
+                    fotoIcone.Source = bi;
+                }
+                else
+                {
+                    ErroVerIcone erroVer = new ErroVerIcone();
+                    erroVer.Show();
+                }
             }
         }
 
@@ -88,7 +93,7 @@ namespace ProjetoFinal
             if (w.ShowDialog().Value)
             {
                 byte[] b = File.ReadAllBytes(w.FileName);
-                foto = Convert.ToBase64String(b);
+                fotoP = Convert.ToBase64String(b);
 
                 BitmapImage bi = new BitmapImage();
                 bi.BeginInit();
@@ -123,7 +128,7 @@ namespace ProjetoFinal
         private void Update_Click(object sender, RoutedEventArgs e)
         {
             Projeto m = new Projeto();
-            m.Nome = NomeTxt.Text;
+            m.NomeP = NomeTxt.Text;
             m.sinopse = SinopseTxt.Text;
             m.endereco = EnderecoTxt.Text;
             m.linksDrive = LinksTxt.Text;

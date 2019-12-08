@@ -64,6 +64,12 @@
     <Compile Include="ClienteListar.xaml.cs">
       <DependentUpon>ClienteListar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ErroExcluirProjetoNull.xaml.cs">
+      <DependentUpon>ErroExcluirProjetoNull.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ErroVerIcone.xaml.cs">
+      <DependentUpon>ErroVerIcone.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IconeClienteAdicionado.xaml.cs">
       <DependentUpon>IconeClienteAdicionado.xaml</DependentUpon>
     </Compile>
@@ -81,6 +87,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ClienteListar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ErroExcluirProjetoNull.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ErroVerIcone.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

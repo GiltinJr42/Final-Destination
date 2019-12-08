@@ -27,12 +27,12 @@
                 <TextBlock x:Name="textBlock_Copy1" Margin="1,174,422,0" TextWrapping="Wrap" Text="Endereço:" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment"/>
                 <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="1,0,0,116" TextWrapping="Wrap" Text="Custo do Projeto:" VerticalAlignment="Bottom" Width="109"/>
                 <TextBox x:Name="PrecoProjeto" Height="30" Margin="1,0,0,81" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="232" d:LayoutOverrides="HorizontalAlignment"/>
-                <CheckBox x:Name="checkStg1" Content="Estágio 1" HorizontalAlignment="Right" Margin="0,123,159,233" d:LayoutOverrides="HorizontalAlignment"/>
-                <CheckBox x:Name="checkStg2" Content="Estágio 2" HorizontalAlignment="Right" Margin="0,123,15,233"/>
-                <CheckBox x:Name="checkStg3" Content="Estágio 3" HorizontalAlignment="Right" Margin="0,235,15,233" d:LayoutOverrides="HorizontalAlignment"/>
-                <CheckBox x:Name="checkStg4" Content="Estágio 4" HorizontalAlignment="Right" Margin="0,235,160,233"/>
-                <TextBlock x:Name="textBlock1" HorizontalAlignment="Right" Margin="0,148,125,0" TextWrapping="Wrap" Text="Estágio do Projeto:" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" />
-                <Button x:Name="AddImagemProjeto" Content="Adicionar Thumbnail " HorizontalAlignment="Right" Margin="0,0,19,69" Width="214" Height="33" VerticalAlignment="Bottom" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment" Style="{DynamicResource MaterialDesignRaisedLightButton}" RenderTransformOrigin="0.537,-0.061"/>
+                <CheckBox x:Name="checkStg1" Content="Estágio 1" HorizontalAlignment="Right" Margin="0,152,158,0" d:LayoutOverrides="HorizontalAlignment" Height="30" VerticalAlignment="Top"/>
+                <CheckBox x:Name="checkStg2" Content="Estágio 2" HorizontalAlignment="Right" Margin="0,157,22,0" Height="19" VerticalAlignment="Top"/>
+                <CheckBox x:Name="checkStg3" Content="Estágio 3" HorizontalAlignment="Right" Margin="0,195,22,0" d:LayoutOverrides="HorizontalAlignment" Height="21" VerticalAlignment="Top"/>
+                <CheckBox x:Name="checkStg4" Content="Estágio 4" HorizontalAlignment="Right" Margin="0,195,160,0" Height="21" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Right" Margin="0,136,124,0" TextWrapping="Wrap" Text="Estágio do Projeto:" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" />
+                <Button x:Name="BtnIconeProj" Content="Adicionar Thumbnail " HorizontalAlignment="Right" Margin="0,0,19,69" Width="214" Height="33" VerticalAlignment="Bottom" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment" Style="{DynamicResource MaterialDesignRaisedLightButton}" RenderTransformOrigin="0.537,-0.061" Click="BtnLoadFromFile_Click"/>
                 <Button x:Name="AddProjetoButton" Content="Adicionar Projeto" Margin="0,0,11,0" Height="53" VerticalAlignment="Bottom" Style="{DynamicResource MaterialDesignRaisedDarkButton}" d:LayoutOverrides="VerticalAlignment" Click="AddProjetoButton_Click"/>
                 <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="-2,284,0,0" TextWrapping="Wrap" Text="Custo de Construção do Projeto:" VerticalAlignment="Top"/>
                 <TextBox x:Name="EnderecoProjeto" Height="49" Margin="1,0,0,245" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="232" d:LayoutOverrides="HorizontalAlignment"/>
@@ -41,6 +41,6 @@
                 <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Right" Margin="0,4,22,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211"><Run Text="LInks Google Drive ("/><Run Text="Use "/><Run Text="/"/><Run Text="):"/></TextBlock>
             </Grid>
         </GroupBox>
-        <Image x:Name="IconeProjeto" HorizontalAlignment="Right" Height="106" Margin="0,0,81,138" VerticalAlignment="Bottom" Width="119"/>
+        <Image x:Name="ImgDynamic" HorizontalAlignment="Right" Height="140" Margin="0,0,36,138" VerticalAlignment="Bottom" Width="211"/>
     </Grid>
 </Window>

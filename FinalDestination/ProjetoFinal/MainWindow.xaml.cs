@@ -24,10 +24,12 @@ namespace ProjetoFinal
     public partial class MainWindow : Window
     {
         NCliente n = new NCliente();
+        NProjeto p = new NProjeto();
         public MainWindow()
         {
             InitializeComponent();
             dataGridClientes.ItemsSource = n.Listar();
+            dataGridProjetos.ItemsSource = p.Listar();
 
         }
 
@@ -64,6 +66,19 @@ namespace ProjetoFinal
             listClient.Show();
 
         }
+        private void AttLista_Click(object sender, RoutedEventArgs e)
+        {
+            dataGridClientes.ItemsSource = n.Listar();
+        }
+        private void AttListaProj_Click(object sender, RoutedEventArgs e)
+        {
+            dataGridProjetos.ItemsSource = p.Listar();
+        }
+        private void AttListaFatura_Click(object sender, RoutedEventArgs e)
+        {
+            dataGridClientes.ItemsSource = n.Listar();
+        }
+
 
     }
 }

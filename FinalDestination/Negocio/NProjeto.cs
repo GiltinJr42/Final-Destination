@@ -12,7 +12,7 @@ namespace Negocio
     {
             private List<Projeto> projetos;
             private Pprojeto p = new Pprojeto();
-
+        private Projeto c = new Projeto();
             public List<Projeto> Listar()
             {
                 projetos = p.Open();
@@ -21,7 +21,7 @@ namespace Negocio
             public List<Projeto> Select()
             {
                 Pprojeto p = new Pprojeto();
-                return p.Open().OrderBy(c => c.Nome).ToList();
+                return p.Open().OrderBy(c => c.NomeP).ToList();
             }
             public void Inserir(Projeto c)
             {
@@ -41,10 +41,16 @@ namespace Negocio
                 }
                 p.Save(projetos);
             }
-            public void Delete(Projeto a)
+            public void Delete(Projeto c)
             {
-                projetos = p.Open();
-                projetos.RemoveAt(projetos.IndexOf(a));
+                Pprojeto p = new Pprojeto();
+                List<Projeto> projetos = p.Open();
+                for (int i = 0; i < projetos.Count; i++)
+                    if (projetos[i].Id == c.Id)
+                    {
+                        projetos.RemoveAt(i);
+                        break;
+                    }
                 p.Save(projetos);
             }
     }

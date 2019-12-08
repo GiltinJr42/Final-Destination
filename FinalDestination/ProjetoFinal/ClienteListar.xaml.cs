@@ -61,20 +61,26 @@ namespace ProjetoFinal
 
         private void MostrarIcone_Click(object sender, RoutedEventArgs e)
         {
+            Pessoa u = dataGridClientes.SelectedItem as Pessoa;
             if (dataGridClientes.SelectedItem != null)
             {
-                Pessoa u = dataGridClientes.SelectedItem as Pessoa;
+                if (u.foto != "")
+                {
+                    byte[] b = Convert.FromBase64String(u.foto);
 
-                byte[] b = Convert.FromBase64String(u.foto);
+                    BitmapImage bi = new BitmapImage();
+                    bi.BeginInit();
+                    bi.StreamSource = new MemoryStream(b);
+                    bi.EndInit();
 
-                BitmapImage bi = new BitmapImage();
-                bi.BeginInit();
-                bi.StreamSource = new MemoryStream(b);
-                bi.EndInit();
-
-                fotoIcone.Source = bi;
+                    fotoIcone.Source = bi;
+                }
+                else
+                {
+                    ErroVerIcone erroVer = new ErroVerIcone();
+                    erroVer.Show();
+                }
             }
-            else{}
         }
 
         private void AttIcone_Click(object sender, RoutedEventArgs e)

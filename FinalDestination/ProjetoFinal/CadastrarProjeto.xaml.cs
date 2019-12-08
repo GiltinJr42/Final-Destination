@@ -15,7 +15,7 @@ namespace ProjetoFinal
     {
         public NProjeto cl = new NProjeto();
 
-        private string fotoIcone = string.Empty;
+        private string IconeProjeto = string.Empty;
 
         public CadastrarProjeto()
         {
@@ -28,11 +28,12 @@ namespace ProjetoFinal
             string endereco = EnderecoProjeto.Text;
             string sinopse = SinopseProjeto.Text;
             string linksDrive = LinksGoogleDrive.Text;
-            double preco = double.Parse(PrecoDeConstrucaoProjeto.Text);
+            string fotoP = IconeProjeto;
+            double preco = double.Parse(PrecoDeConstrucaoProjeto.Text);     
             double valorConstr = double.Parse(PrecoProjeto.Text);
-
+            
             Projeto p = new Projeto();
-            p.Nome = nome; p.endereco = endereco; p.sinopse = sinopse; p.linksDrive = linksDrive; p.preco = preco; p.valorConstr = valorConstr;
+            p.NomeP = nome; p.endereco = endereco; p.sinopse = sinopse; p.linksDrive = linksDrive; p.preco = preco; p.valorConstr = valorConstr; p.fotoP = fotoP ;
             cl.Inserir(p);
             ProjetoAdicionado projAdd = new ProjetoAdicionado();
 
@@ -46,14 +47,14 @@ namespace ProjetoFinal
             if (w.ShowDialog().Value)
             {
                 byte[] b = File.ReadAllBytes(w.FileName);
-                fotoIcone = Convert.ToBase64String(b);
+                IconeProjeto = Convert.ToBase64String(b);
 
                 BitmapImage bi = new BitmapImage();
                 bi.BeginInit();
                 bi.StreamSource = new MemoryStream(b);
                 bi.EndInit();
 
-                IconeProjeto.Source = bi;
+                ImgDynamic.Source = bi;
             }
         }
     }
