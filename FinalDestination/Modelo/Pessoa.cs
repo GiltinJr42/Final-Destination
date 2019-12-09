@@ -15,6 +15,10 @@ namespace Modelo
         public string senha { get; set; }
         public string foto { get; set; }
         public int Tipo { get; set; }
-     
+
+        public override string ToString()
+        {
+            return $"Nome: {Nome} -- Email: {Email}";
+        }
     }
 }

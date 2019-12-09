@@ -50,7 +50,7 @@
     <Compile Include="Arq.cs" />
     <Compile Include="CR.cs" />
     <Compile Include="Est.cs" />
-    <Compile Include="ModeloFat.cs" />
+    <Compile Include="Fatura.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Projeto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

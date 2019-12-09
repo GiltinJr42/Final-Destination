@@ -36,6 +36,7 @@ namespace ProjetoFinal
         {
             InitializeComponent();
             dataGridClientes.ItemsSource = n.Listar();
+           
 
         }
 
@@ -57,16 +58,59 @@ namespace ProjetoFinal
                 dataGridClientes.ItemsSource = n.Listar();
             }
         }
-
-
-        private void MostrarIcone_Click(object sender, RoutedEventArgs e)
+        private void EditarCliente_Click(object sender, RoutedEventArgs e)
         {
-            Pessoa u = dataGridClientes.SelectedItem as Pessoa;
+            Pessoa c = dataGridClientes.SelectedItem as Pessoa;
             if (dataGridClientes.SelectedItem != null)
             {
-                if (u.foto != "")
+                NomeTxt.Text = c.Nome;
+                EmailTxt.Text = c.Email;
+                FoneTxt.Text = c.Fone;
+                if (c != null)
                 {
-                    byte[] b = Convert.FromBase64String(u.foto);
+                    OpenFileDialog w = new OpenFileDialog();
+                    w.Filter = "Arquivos Jpg|*.jpg";
+                    if (w.ShowDialog().Value)
+                    {
+                        byte[] b = File.ReadAllBytes(w.FileName);
+                        c.foto = Convert.ToBase64String(b);
+
+                        BitmapImage bi = new BitmapImage();
+                        bi.BeginInit();
+                        bi.StreamSource = new MemoryStream(b);
+                        bi.EndInit();
+
+                        fotoIcone.Source = bi;
+                    }
+                }
+               
+           
+            
+            }
+        }
+        private void AtualizarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            Pessoa c = dataGridClientes.SelectedItem as Pessoa;
+
+            c.Nome = NomeTxt.Text;
+            c.Fone = FoneTxt.Text;
+            c.Email = EmailTxt.Text;
+
+            n.Update(c);
+            dataGridClientes.ItemsSource = n.Listar();
+
+            ClienteEditado cEd = new ClienteEditado();
+            cEd.Show();
+
+        }
+        private void MostrarIcone_Click(object sender, RoutedEventArgs e)
+        {
+            Pessoa c = dataGridClientes.SelectedItem as Pessoa;
+            if (dataGridClientes.SelectedItem != null)
+            {
+                if (c.foto != "")
+                {
+                    byte[] b = Convert.FromBase64String(c.foto);
 
                     BitmapImage bi = new BitmapImage();
                     bi.BeginInit();
@@ -75,7 +119,7 @@ namespace ProjetoFinal
 
                     fotoIcone.Source = bi;
                 }
-                else
+                if (c.foto == "")
                 {
                     ErroVerIcone erroVer = new ErroVerIcone();
                     erroVer.Show();

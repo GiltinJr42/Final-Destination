@@ -16,7 +16,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using Modelo;
 using Negocio;
-
+using MediaFoundation.OPM;
 namespace ProjetoFinal
 {
     /// <summary>
@@ -24,13 +24,20 @@ namespace ProjetoFinal
     /// </summary>
     public partial class FaturaMensal : Window
     {
-        NCliente n = new NCliente();
-        NProjeto p = new NProjeto();
+
+        Pessoa c = new Pessoa();
+        Projeto p = new Projeto();
+        Fatura f = new Fatura();
         public FaturaMensal()
         {
             InitializeComponent();
-            dataGridFatura.ItemsSource = n.Listar();
-            dataGridFatura.ItemsSource = p.Listar();
+         
+        }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<Fatura> list = new List<Fatura>();
+            
+            
         }
     }
 }

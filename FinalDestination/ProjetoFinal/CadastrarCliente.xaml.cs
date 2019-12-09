@@ -50,6 +50,7 @@ namespace ProjetoFinal
             this.Close();
             clientAdd.Show();
 
+        
         }
         private void BtnLoadFromFile_Click(object sender, RoutedEventArgs e)
         {
