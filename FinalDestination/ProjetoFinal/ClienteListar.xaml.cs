@@ -57,6 +57,15 @@ namespace ProjetoFinal
                 dataGridClientes.ItemsSource = null;
                 dataGridClientes.ItemsSource = n.Listar();
             }
+            try
+            {
+
+            }
+            catch
+            {
+                ErroDesconhecido erroD = new ErroDesconhecido();
+                erroD.Show();
+            }
         }
         private void EditarCliente_Click(object sender, RoutedEventArgs e)
         {
@@ -101,6 +110,14 @@ namespace ProjetoFinal
                 ErroNumBox errNum = new ErroNumBox();
                 errNum.Show();
                 return;
+            }
+            try
+            {
+            }
+            catch
+            {
+                ErroDesconhecido erroD = new ErroDesconhecido();
+                erroD.Show();
             }
 
             n.Update(c);
@@ -186,13 +203,31 @@ namespace ProjetoFinal
 
             NCliente n = new NCliente();
             n.Update(m);
+            try
+            {
+
+            }
+            catch
+            {
+                ErroDesconhecido erroD = new ErroDesconhecido();
+                erroD.Show();
+            }
         }
         private void SelectClick(object sender, RoutedEventArgs e)
         {
             NCliente n = new NCliente();
             dataGridClientes.ItemsSource = null;
             dataGridClientes.ItemsSource = n.Select();
+            try
+            {
+
+            }
+            catch
+            {
+                ErroDesconhecido erroD = new ErroDesconhecido();
+                erroD.Show();
+            }
         }
+    }
        
     }
-}

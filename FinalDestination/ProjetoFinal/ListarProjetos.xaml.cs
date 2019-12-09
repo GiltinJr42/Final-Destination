@@ -144,5 +144,10 @@ namespace ProjetoFinal
             dataGridProjetos.ItemsSource = null;
             dataGridProjetos.ItemsSource = n.Select();
         }
+
+        private void checkBox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

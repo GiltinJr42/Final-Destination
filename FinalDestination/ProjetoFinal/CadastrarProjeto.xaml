@@ -13,7 +13,7 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
-        Title="CadastrarProjeto" Height="606" Width="543.595">
+        Title="CadastrarProjeto" Height="646.5" Width="543.595">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -24,23 +24,24 @@
                 <TextBox x:Name="NomeProjeto" Height="23" Margin="0,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="233" d:LayoutOverrides="HorizontalAlignment"/>
                 <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="1,51,0,0" TextWrapping="Wrap" Text="Sinopse Curta do Projeto:" VerticalAlignment="Top"/>
                 <TextBox x:Name="SinopseProjeto" Margin="-2,67,0,0" TextWrapping="Wrap" Text="" HorizontalAlignment="Left" Width="235" d:LayoutOverrides="HorizontalAlignment" Height="97" VerticalAlignment="Top"/>
-                <TextBlock x:Name="textBlock_Copy1" Margin="1,174,422,0" TextWrapping="Wrap" Text="Endereço:" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment"/>
-                <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="1,0,0,116" TextWrapping="Wrap" Text="Custo do Projeto:" VerticalAlignment="Bottom" Width="109"/>
-                <TextBox x:Name="PrecoProjeto" Height="30" Margin="1,0,0,81" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="232" d:LayoutOverrides="HorizontalAlignment"/>
+                <TextBlock x:Name="textBlock_Copy1" Margin="1,178,422,0" TextWrapping="Wrap" Text="Endereço:" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment"/>
+                <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="0,0,0,191" TextWrapping="Wrap" Text="Custo do Projeto:" VerticalAlignment="Bottom" Width="109"/>
+                <TextBox x:Name="PrecoProjeto" Height="30" Margin="1,0,0,156" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="232" d:LayoutOverrides="HorizontalAlignment"/>
                 <CheckBox x:Name="checkStg1" Content="Estágio 1" HorizontalAlignment="Right" Margin="0,152,158,0" d:LayoutOverrides="HorizontalAlignment" Height="30" VerticalAlignment="Top"/>
                 <CheckBox x:Name="checkStg2" Content="Estágio 2" HorizontalAlignment="Right" Margin="0,157,22,0" Height="19" VerticalAlignment="Top"/>
                 <CheckBox x:Name="checkStg3" Content="Estágio 3" HorizontalAlignment="Right" Margin="0,195,22,0" d:LayoutOverrides="HorizontalAlignment" Height="21" VerticalAlignment="Top"/>
                 <CheckBox x:Name="checkStg4" Content="Estágio 4" HorizontalAlignment="Right" Margin="0,195,160,0" Height="21" VerticalAlignment="Top"/>
                 <TextBlock x:Name="textBlock1" HorizontalAlignment="Right" Margin="0,136,124,0" TextWrapping="Wrap" Text="Estágio do Projeto:" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" />
-                <Button x:Name="BtnIconeProj" Content="Adicionar Thumbnail " HorizontalAlignment="Right" Margin="0,0,19,69" Width="214" Height="33" VerticalAlignment="Bottom" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment" Style="{DynamicResource MaterialDesignRaisedLightButton}" RenderTransformOrigin="0.537,-0.061" Click="BtnLoadFromFile_Click"/>
-                <Button x:Name="AddProjetoButton" Content="Adicionar Projeto" Margin="0,0,11,0" Height="53" VerticalAlignment="Bottom" Style="{DynamicResource MaterialDesignRaisedDarkButton}" d:LayoutOverrides="VerticalAlignment" Click="AddProjetoButton_Click"/>
-                <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="-2,284,0,0" TextWrapping="Wrap" Text="Custo de Construção do Projeto:" VerticalAlignment="Top"/>
-                <TextBox x:Name="EnderecoProjeto" Height="49" Margin="1,0,0,245" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="232" d:LayoutOverrides="HorizontalAlignment"/>
-                <TextBox x:Name="PrecoDeConstrucaoProjeto" Height="23" Margin="-2,0,0,161" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="235" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
+                <Button x:Name="BtnIconeProj" Content="Adicionar Thumbnail " HorizontalAlignment="Right" Margin="0,0,15,99" Width="218" Height="33" VerticalAlignment="Bottom" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment" Style="{DynamicResource MaterialDesignRaisedLightButton}" RenderTransformOrigin="0.537,-0.061" Click="BtnLoadFromFile_Click"/>
+                <Button x:Name="AddProjetoButton" Content="Adicionar Projeto" Margin="1,0,10,24" Height="53" VerticalAlignment="Bottom" Style="{DynamicResource MaterialDesignRaisedDarkButton}" d:LayoutOverrides="VerticalAlignment" Click="AddProjetoButton_Click"/>
+                <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="1,267,0,0" TextWrapping="Wrap" Text="Custo de Construção do Projeto:" VerticalAlignment="Top"/>
+                <TextBox x:Name="EnderecoProjeto" Height="49" Margin="1,0,0,281" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="232" d:LayoutOverrides="HorizontalAlignment"/>
+                <TextBox x:Name="PrecoDeConstrucaoProjeto" Height="23" Margin="1,0,0,218" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="235" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
                 <TextBox x:Name="LinksGoogleDrive" Height="93" Margin="256,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="219"/>
                 <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Right" Margin="0,4,22,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211"><Run Text="LInks Google Drive ("/><Run Text="Use "/><Run Text="/"/><Run Text="):"/></TextBlock>
+                <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="1,0,0,99" VerticalAlignment="Bottom" Width="233" RenderTransformOrigin="0.788,0.75" Height="36"/>
             </Grid>
         </GroupBox>
-        <Image x:Name="ImgDynamic" HorizontalAlignment="Right" Height="140" Margin="0,0,36,138" VerticalAlignment="Bottom" Width="211"/>
+        <Image x:Name="ImgDynamic" HorizontalAlignment="Right" Margin="0,296,38,179" Width="210"/>
     </Grid>
 </Window>

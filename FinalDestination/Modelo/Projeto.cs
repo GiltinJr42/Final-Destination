@@ -10,6 +10,7 @@ namespace Modelo
     public class Projeto : Pessoa
     {
         public int Id { get; set; }
+        public int clienteID { get; set; }
         public string NomeP{ get; set; }
         public string endereco { get; set; }
         public string sinopse { get; set; }
