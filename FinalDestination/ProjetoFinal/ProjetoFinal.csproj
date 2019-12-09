@@ -91,8 +91,14 @@
     <Compile Include="ClienteListar.xaml.cs">
       <DependentUpon>ClienteListar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ErroDesconhecido.xaml.cs">
+      <DependentUpon>ErroDesconhecido.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ErroExcluirProjetoNull.xaml.cs">
       <DependentUpon>ErroExcluirProjetoNull.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ErroNumBox.xaml.cs">
+      <DependentUpon>ErroNumBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="ErroVerIcone.xaml.cs">
       <DependentUpon>ErroVerIcone.xaml</DependentUpon>
@@ -121,7 +127,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ErroDesconhecido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ErroExcluirProjetoNull.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ErroNumBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

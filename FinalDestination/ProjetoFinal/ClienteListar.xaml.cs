@@ -28,7 +28,7 @@ namespace ProjetoFinal
     public partial class ClienteListar : Window
     {
         private string foto = string.Empty;
-
+        int i;
         NCliente n = new NCliente();
         private Pessoa c;
 
@@ -36,7 +36,7 @@ namespace ProjetoFinal
         {
             InitializeComponent();
             dataGridClientes.ItemsSource = n.Listar();
-           
+
 
         }
 
@@ -83,9 +83,9 @@ namespace ProjetoFinal
                         fotoIcone.Source = bi;
                     }
                 }
-               
-           
-            
+
+
+
             }
         }
         private void AtualizarCliente_Click(object sender, RoutedEventArgs e)
@@ -96,11 +96,19 @@ namespace ProjetoFinal
             c.Fone = FoneTxt.Text;
             c.Email = EmailTxt.Text;
 
+            if (!int.TryParse(FoneTxt.Text, out i))
+            {
+                ErroNumBox errNum = new ErroNumBox();
+                errNum.Show();
+                return;
+            }
+
             n.Update(c);
             dataGridClientes.ItemsSource = n.Listar();
 
             ClienteEditado cEd = new ClienteEditado();
             cEd.Show();
+
 
         }
         private void MostrarIcone_Click(object sender, RoutedEventArgs e)
@@ -108,7 +116,7 @@ namespace ProjetoFinal
             Pessoa c = dataGridClientes.SelectedItem as Pessoa;
             if (dataGridClientes.SelectedItem != null)
             {
-                if (c.foto != "")
+                try //(c.foto != null)
                 {
                     byte[] b = Convert.FromBase64String(c.foto);
 
@@ -119,10 +127,15 @@ namespace ProjetoFinal
 
                     fotoIcone.Source = bi;
                 }
-                if (c.foto == "")
+                catch //(c.foto == null)
                 {
                     ErroVerIcone erroVer = new ErroVerIcone();
                     erroVer.Show();
+                }
+                finally
+                {
+                    ErroDesconhecido erroDesconhecido = new ErroDesconhecido();
+                    erroDesconhecido.Show();
                 }
             }
         }
@@ -180,5 +193,6 @@ namespace ProjetoFinal
             dataGridClientes.ItemsSource = null;
             dataGridClientes.ItemsSource = n.Select();
         }
+       
     }
 }

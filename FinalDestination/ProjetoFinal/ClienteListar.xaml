@@ -20,7 +20,7 @@
             IsReadOnly="True"
             Margin="0,154,0,0" SelectionChanged="dataGridClientes_SelectionChanged" HorizontalAlignment="Left" Width="698">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding NomeC}" Header="Nome" Width="120" CanUserResize="True"/>
+                        <DataGridTextColumn Binding="{Binding Nome}" Header="Nome" Width="120" CanUserResize="True"/>
                         <DataGridTextColumn Binding="{Binding Fone}"  Header="Telefone" Width="120" CanUserResize="True"/>
                         <DataGridHyperlinkColumn Binding="{Binding Email}" Header="E-mail" Width="120" CanUserResize="True"/>
 
