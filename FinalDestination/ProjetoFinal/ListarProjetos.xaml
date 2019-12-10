@@ -13,12 +13,12 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
-        Title="ListarProjetos" Height="904.8" Width="973.782">
+        Title="ListarProjetos" Height="904.8" Width="1314.782">
     <Grid>
         <GroupBox x:Name="groupBox" Header="Listagem de Projetos" Margin="10">
             <Grid Margin="0,0,0,0" MaxWidth="2600">
                 <DataGrid Name="dataGridProjetos"
-                AutoGenerateColumns="True"
+                AutoGenerateColumns="False"
                 SelectionUnit="FullRow"
                 SelectionMode="Extended"
                 CanUserReorderColumns="False"
@@ -26,9 +26,12 @@
                 CanUserAddRows="False"
                 CanUserDeleteRows="False"
                 IsReadOnly="True"
-                Margin="0,274,0,0" SelectionChanged="dataGridProjetos_SelectionChanged" HorizontalAlignment="Left" Width="922">
+                Margin="0,274,0,0" SelectionChanged="dataGridProjetos_SelectionChanged" HorizontalAlignment="Left" Width="1269">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding NomeP}" Header="Nome" Width="120" CanUserResize="True"/>
+                        <DataGridTextColumn Binding="{Binding NomeP}" Header="Nome do Projeto" Width="Auto" CanUserResize="True"/>
+                        <DataGridTextColumn Binding="{Binding NomeCliente}" Header="Cliente" Width="Auto" CanUserResize="True"/>
+                        <DataGridTextColumn Binding="{Binding preco}" Header="Preço Projeto" Width="Auto" />
+                        <DataGridTextColumn Binding="{Binding valorConstr}" Header="Preço Construir" Width="Auto" />
 
                         <DataGridHyperlinkColumn Binding="{Binding linksDrive}" Header="Link Drive" Width="120" CanUserResize="True"/>
 
@@ -42,7 +45,7 @@
                         <DataGridTemplateColumn Header="Atualizar" Width="120">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button x:Name="Insert" Content="Editar" Click="Insert_Click"></Button>
+                                    <Button x:Name="Insert" Content="Editar" Click="EditarProjeto_Click"></Button>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
@@ -56,19 +59,19 @@
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <Button x:Name="AtualizarProjeto" Content="Atualizar Projeto" Margin="0,225,26,0" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.156" Click="Update_Click" HorizontalAlignment="Right" Width="417"/>
-                <Image x:Name="fotoIcone" Margin="10,91,0,0" HorizontalAlignment="Left" Width="150" Height="116" VerticalAlignment="Top"/>
-                <TextBox x:Name="NomeTxt" HorizontalAlignment="Left" Margin="180,35,0,0" TextWrapping="Wrap" Text="Nome" Width="282" Height="22" VerticalAlignment="Top" RenderTransformOrigin="0.533,-0.386"/>
-                <TextBox x:Name="SinopseTxt" Margin="180,198,0,0" TextWrapping="Wrap" Text="Endereço" Height="56" VerticalAlignment="Top" HorizontalAlignment="Left" Width="282"/>
-                <TextBox x:Name="LinksTxt" HorizontalAlignment="Right" Margin="0,35,204,0" TextWrapping="Wrap" Text="Link" Width="239" Height="22" VerticalAlignment="Top"/>
-                <TextBox x:Name="EnderecoTxt" Margin="180,75,466,0" TextWrapping="Wrap" Text="Sinopse" Height="82" VerticalAlignment="Top"/>
-                <TextBox x:Name="LinksTxt_Copy" HorizontalAlignment="Right" Margin="0,122,204,0" TextWrapping="Wrap" Text="Preço do Projeto" Width="239" Height="22" VerticalAlignment="Top"/>
-                <TextBox x:Name="LinksTxt_Copy1" HorizontalAlignment="Right" Margin="0,189,204,0" TextWrapping="Wrap" Text="Preço da Construção" Width="239" Height="22" VerticalAlignment="Top"/>
-                <CheckBox x:Name="checkBox" Content="Estágio 1" HorizontalAlignment="Right" Margin="0,130,109,0" VerticalAlignment="Top" Checked="checkBox_Checked"/>
-                <CheckBox x:Name="checkBox_Copy" Content="Estágio 2" HorizontalAlignment="Right" Margin="0,130,26,0" VerticalAlignment="Top"/>
-                <CheckBox x:Name="checkBox_Copy1" Content="Estágio 3" HorizontalAlignment="Right" Margin="0,175,109,0" VerticalAlignment="Top"/>
-                <CheckBox x:Name="checkBox_Copy2" Content="Estágio 4" HorizontalAlignment="Right" Margin="0,175,26,0" VerticalAlignment="Top" RenderTransformOrigin="0.48,1.083"/>
-                <TextBlock x:Name="textBlock" HorizontalAlignment="Right" Margin="0,91,78,0" TextWrapping="Wrap" Text="Estágio do Projeto" VerticalAlignment="Top"/>
+                <Button x:Name="AtualizarProjeto" Content="Atualizar Projeto" Margin="0,230,10,0" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.156" Click="AtualizarProjeto_Click" HorizontalAlignment="Right" Width="331"/>
+                <Image x:Name="fotoIcone" Margin="10,10,0,0" HorizontalAlignment="Left" Width="229" Height="250" VerticalAlignment="Top"/>
+                <TextBox x:Name="NomeTxt" HorizontalAlignment="Left" Margin="260,44,0,0" TextWrapping="Wrap" Text="Nome" Width="316" Height="22" VerticalAlignment="Top" RenderTransformOrigin="0.533,-0.386"/>
+                <TextBox x:Name="SinopseTxt" Margin="260,204,0,0" TextWrapping="Wrap" Text="Endereço" Height="56" VerticalAlignment="Top" HorizontalAlignment="Left" Width="316"/>
+                <TextBox x:Name="LinksTxt" Margin="605,48,384,0" TextWrapping="Wrap" Text="Link" Height="22" VerticalAlignment="Top"/>
+                <TextBox x:Name="EnderecoTxt" Margin="260,84,0,0" TextWrapping="Wrap" Text="Sinopse" Height="82" VerticalAlignment="Top" HorizontalAlignment="Left" Width="316"/>
+                <TextBox x:Name="CustoProjetoTxt" Margin="605,141,384,0" TextWrapping="Wrap" Text="Preço do Projeto" Height="22" VerticalAlignment="Top"/>
+                <TextBox x:Name="CustoConstrucaoTxt" Margin="605,235,364,0" TextWrapping="Wrap" Text="Preço da Construção" Height="22" VerticalAlignment="Top"/>
+                <CheckBox x:Name="BoxEstagioProj" Content="" Margin="0,93,196,0" VerticalAlignment="Top" RenderTransformOrigin="-0.122,2.833" HorizontalAlignment="Right" Checked="Checked_Checked" Unchecked="Unchecked_Checked"/>
+                <TextBlock x:Name="textBlock" Margin="0,48,245,0" TextWrapping="Wrap" Text="Estágio do Projeto" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                <DatePicker x:Name="DataDePagamento" HorizontalAlignment="Right" Margin="0,182,10,0" VerticalAlignment="Top" Width="331"/>
+                <TextBlock x:Name="textBlock_Copy" Margin="0,136,234,0" TextWrapping="Wrap" Text="Data de Pagamento:" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                <TextBlock x:Name="text1" HorizontalAlignment="Right" Margin="0,77,167,0" TextWrapping="Wrap" Text="Em andamento" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>
     </Grid>

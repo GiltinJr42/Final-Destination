@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoFinal"
         mc:Ignorable="d"
-        Title="ClienteListar" Height="565.5" Width="752">
+        Title="ClienteListar" Height="565.5" Width="851">
     <Grid>
         <GroupBox x:Name="groupBox" Header="Listagem de clientes" Margin="10">
             <Grid Margin="0,0,0,0" MaxWidth="2600">
@@ -18,7 +18,7 @@
             CanUserAddRows="False"
             CanUserDeleteRows="False"
             IsReadOnly="True"
-            Margin="0,110,0,0" SelectionChanged="dataGridClientes_SelectionChanged" HorizontalAlignment="Left" Width="698">
+            Margin="0,110,0,0" SelectionChanged="dataGridClientes_SelectionChanged" HorizontalAlignment="Left" Width="797">
                     <DataGrid.Columns>
                         <DataGridTextColumn Binding="{Binding Nome}" Header="Nome" Width="120" CanUserResize="True"/>
                         <DataGridTextColumn Binding="{Binding Fone}"  Header="Telefone" Width="120" CanUserResize="True"/>
@@ -48,10 +48,10 @@
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <Button x:Name="AtualizarCliente" Content="Atualizar Cliente" Margin="457,59,8,0" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.156" Click="AtualizarCliente_Click"/>
-                <Image x:Name="fotoIcone" Margin="10,15,0,0" HorizontalAlignment="Left" Width="165" Height="81" VerticalAlignment="Top"/>
-                <TextBox x:Name="NomeTxt" Margin="196,10,292,0" TextWrapping="Wrap" Text="Nome" Height="22" VerticalAlignment="Top" RenderTransformOrigin="0.533,-0.386"/>
-                <TextBox x:Name="FoneTxt" Margin="196,63,292,0" TextWrapping="Wrap" Text="Telefone" Height="22" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
+                <Button x:Name="AtualizarCliente" Content="Atualizar Cliente" Margin="554,59,8,0" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.156" Click="AtualizarCliente_Click"/>
+                <Image x:Name="fotoIcone" Margin="10,0,0,0" HorizontalAlignment="Left" Width="271" Height="96" VerticalAlignment="Top"/>
+                <TextBox x:Name="NomeTxt" Margin="286,10,292,0" TextWrapping="Wrap" Text="Nome" Height="22" VerticalAlignment="Top" RenderTransformOrigin="0.533,-0.386"/>
+                <TextBox x:Name="FoneTxt" Margin="286,63,292,0" TextWrapping="Wrap" Text="Telefone" Height="22" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
                 <TextBox x:Name="EmailTxt" HorizontalAlignment="Right" Margin="0,15,10,0" TextWrapping="Wrap" Text="E-mail" Width="241" Height="22" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>

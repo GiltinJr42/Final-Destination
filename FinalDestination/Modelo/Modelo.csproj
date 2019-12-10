@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arq.cs" />
+    <Compile Include="ClienteVisualizar.cs" />
     <Compile Include="CR.cs" />
     <Compile Include="Est.cs" />
     <Compile Include="Fatura.cs" />

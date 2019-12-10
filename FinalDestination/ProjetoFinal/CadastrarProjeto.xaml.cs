@@ -5,6 +5,8 @@ using System.Windows.Media.Imaging;
 using Microsoft.Win32;
 using Negocio;
 using Modelo;
+using Persistencia;
+using System.Collections.Generic;
 
 namespace ProjetoFinal
 {
@@ -14,33 +16,37 @@ namespace ProjetoFinal
     public partial class CadastrarProjeto : Window
     {
         public NProjeto cl = new NProjeto();
+        private Pessoa p = new Pessoa();
+        public NCliente nc = new NCliente();
 
         private string IconeProjeto = string.Empty;
 
         public CadastrarProjeto()
         {
             InitializeComponent();
+            ClientesComboBox.ItemsSource = typeof(Pessoa).GetProperties();
+            ClientesComboBox.ItemsSource = nc.Listar();
         }
 
-        private void AddProjetoButton_Click(object sender, RoutedEventArgs e)
+        private void AdicionarProjeto_Click(object sender, RoutedEventArgs e)
         {
-            string nome = NomeProjeto.Text;
-            string endereco = EnderecoProjeto.Text;
-            string sinopse = SinopseProjeto.Text;
-            string linksDrive = LinksGoogleDrive.Text;
+            string nome = NomeTxt.Text;
+            string endereco = EnderecoTxt.Text;
+            string sinopse = SinopseTxt.Text;
+            string linksDrive = LinksTxt.Text;
             string fotoP = IconeProjeto;
-            double preco = double.Parse(PrecoDeConstrucaoProjeto.Text);     
-            double valorConstr = double.Parse(PrecoProjeto.Text);
+            double preco = Convert.ToDouble(CustoProjeto.Text);
+            double valorConstr = Convert.ToDouble(CustoConstrucao.Text);
             
             Projeto p = new Projeto();
-            p.NomeP = nome; p.endereco = endereco; p.sinopse = sinopse; p.linksDrive = linksDrive; p.preco = preco; p.valorConstr = valorConstr; p.fotoP = fotoP ;
+            p.NomeP = nome; p.endereco = endereco; p.sinopse = sinopse; p.linksDrive = linksDrive; p.preco = preco; p.valorConstr = valorConstr; p.fotoP = fotoP; 
             cl.Inserir(p);
             ProjetoAdicionado projAdd = new ProjetoAdicionado();
 
             this.Close();
             projAdd.Show();
         }
-        private void BtnLoadFromFile_Click(object sender, RoutedEventArgs e)
+        private void IconeProjeto_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog w = new OpenFileDialog();
             w.Filter = "Arquivos Jpg|*.jpg|*.PNG|*.png|*.Png|*.JPEG|*.jpeg|*.Jpeg";
@@ -56,6 +62,22 @@ namespace ProjetoFinal
 
                 ImgDynamic.Source = bi;
             }
+        }
+        int clienteID = 0;
+        string NomeCliente = string.Empty;
+        string fotoIconeCliente = string.Empty;
+        private void Clientes_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            Pessoa c = ClientesComboBox.SelectedItem as Pessoa;
+            Projeto p = new Projeto();
+            p.NomeCliente = (ClientesComboBox.SelectedItem as Pessoa).Nome;
+            p.clienteID = (ClientesComboBox.SelectedItem as Pessoa).Id;
+            p.fotoIconeCliente = (ClientesComboBox.SelectedItem as Pessoa).foto;
+
+            p.clienteID = c.Id;
+            p.NomeCliente = c.Nome;
+            p.fotoIconeCliente = c.foto;
+
         }
     }
 }

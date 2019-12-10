@@ -12,46 +12,68 @@ namespace Negocio
     {
             private List<Projeto> projetos;
             private Pprojeto p = new Pprojeto();
-        private Projeto c = new Projeto();
+            private Projeto c = new Projeto();
             public List<Projeto> Listar()
             {
                 projetos = p.Open();
                 return projetos;
             }
+
             public List<Projeto> Select()
             {
                 Pprojeto p = new Pprojeto();
                 return p.Open().OrderBy(c => c.NomeP).ToList();
             }
-            public void Inserir(Projeto c)
+
+            public List<Projeto> Pesquisar(string NomeP)
             {
-                projetos = p.Open();
-                projetos.Add(c);
-                p.Save(projetos);
+                Pprojeto p = new Pprojeto();
+                List<Projeto> cs = p.Open().OrderBy(c => c.NomeP).ToList();
+                List<Projeto> r = new List<Projeto>();
+                foreach (Projeto c in cs)
+                    if (c.NomeP.StartsWith(NomeP)) r.Add(c);
+                return r;
             }
+
+            public void Inserir(Projeto c)
+                {
+                    Pprojeto p = new Pprojeto();
+                    List<Projeto> cs = p.Open();
+                    int m = 0;
+                    foreach (Projeto x in cs) if (x.Id > m)
+                        {
+                            m = x.Id;
+                        }
+                    c.Id = m + 1;
+                    cs.Add(c);
+                    p.Save(cs);
+                }
+
             public void Update(Projeto c)
             {
-                projetos = p.Open();
-                for (int i = 0; i < projetos.Count; i++)
-                {
-                    if (projetos[i].Id == c.Id)
+                Pprojeto p = new Pprojeto();
+                List<Projeto> cs = p.Open();
+                for (int i = 0; i < cs.Count; i++)
+                    if (cs[i].Id == c.Id)
                     {
-                        projetos[i] = c;
+                        cs.RemoveAt(i);
+                        break;
                     }
-                }
-                p.Save(projetos);
+                cs.Add(c);
+                p.Save(cs);
             }
+
             public void Delete(Projeto c)
             {
                 Pprojeto p = new Pprojeto();
-                List<Projeto> projetos = p.Open();
-                for (int i = 0; i < projetos.Count; i++)
-                    if (projetos[i].Id == c.Id)
+                List<Projeto> cs = p.Open();
+                for (int i = 0; i < cs.Count; i++)
+                    if (cs[i].Id == c.Id)
                     {
-                        projetos.RemoveAt(i);
+                        cs.RemoveAt(i);
                         break;
                     }
-                p.Save(projetos);
+                p.Save(cs);
             }
     }
 }

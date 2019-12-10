@@ -106,6 +106,9 @@
     <Compile Include="IconeClienteAdicionado.xaml.cs">
       <DependentUpon>IconeClienteAdicionado.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ProjetoEditado.xaml.cs">
+      <DependentUpon>ProjetoEditado.xaml</DependentUpon>
+    </Compile>
     <Compile Include="System\Windows\Forms.cs" />
     <Page Include="CadastrarCliente.xaml">
       <SubType>Designer</SubType>
@@ -190,6 +193,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ProjetoAdicionado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProjetoEditado.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

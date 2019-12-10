@@ -13,18 +13,17 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
-        Title="PaginaPrincipal" Height="450" Width="884">
+        Title="PaginaPrincipal" Height="450" Width="1011.5">
 
     <Grid>
 
         <Grid Margin="10,10,-2,-13">
-            <GroupBox x:Name="groupBox1" Header="Projetos" Margin="0,0,250,10" materialDesign:ColorZoneAssist.Mode="PrimaryLight">
+            <GroupBox x:Name="groupBox1" Header="Projetos" Margin="0,0,313,10" materialDesign:ColorZoneAssist.Mode="PrimaryLight">
                 <Grid Margin="10,0,-2,6">
-                    <Button x:Name="button" Content="Editar Projeto" Margin="10,10,215,0" VerticalAlignment="Top" Height="32"/>
-                    <Button x:Name="AddPrj" Content="Adicionar Projeto" Margin="10,49,215,0" VerticalAlignment="Top" Height="33" Click="CadastrarProjeto_Click" Style="{DynamicResource MaterialDesignRaisedLightButton}" />
-                    <Button x:Name="FaturaMensal" Content="Fatura Mensal" Margin="0,89,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="172" Click="FaturaMensal_Click"/>
-                    <Button x:Name="ListarProjetos" Content="Listar Projetos" Margin="10,89,215,0" VerticalAlignment="Top" d:LayoutOverrides="Height" Click="ListarProjetos_Click"/>
-                    <materialDesign:Card Margin="0,10,10,0" VerticalAlignment="Top" materialDesign:ShadowAssist.ShadowEdges="Bottom" HorizontalAlignment="Right" Width="172" Height="72" />
+                    <Button x:Name="AddPrj" Content="Adicionar Projeto" Margin="10,10,280,0" VerticalAlignment="Top" Height="33" Click="CadastrarProjeto_Click" Style="{DynamicResource MaterialDesignRaisedLightButton}" d:LayoutOverrides="HorizontalAlignment" />
+                    <Button x:Name="FaturaMensal" Content="Fatura Mensal" Margin="0,84,20,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="230" Click="FaturaMensal_Click" d:LayoutOverrides="HorizontalAlignment"/>
+                    <Button x:Name="ListarProjetos" Content="Listar Projetos" Margin="10,50,280,0" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment, Height" Click="ListarProjetos_Click"/>
+                    <materialDesign:Card Margin="0,5,20,0" VerticalAlignment="Top" materialDesign:ShadowAssist.ShadowEdges="Bottom" HorizontalAlignment="Right" Width="230" Height="72" d:LayoutOverrides="HorizontalAlignment" />
                     <DataGrid x:Name="dataGridProjetos"
                         AutoGenerateColumns="False"
                         SelectionUnit="FullRow"
@@ -34,14 +33,14 @@
                         CanUserAddRows="False"
                         CanUserDeleteRows="False"
                         IsReadOnly="True"
-                        Margin="10,163,0,10" HorizontalAlignment="Left" Width="367">
+                        Margin="10,117,0,10" HorizontalAlignment="Left" Width="367">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Binding="{Binding Nome}" Header="Nome" Width="110" CanUserResize="False"/>
+                            <DataGridTextColumn Binding="{Binding NomeP}" Header="Nome" Width="110" CanUserResize="False"/>
                             <DataGridTextColumn Binding="{Binding linksDrive}"  Header="Link google drive" Width="Auto" CanUserResize="False"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button x:Name="AttListaProj" Content="Atualizar Lista" Margin="10,126,216,0" VerticalAlignment="Top" Height="25" Click="AttListaProj_Click" Style="{DynamicResource MaterialDesignRaisedLightButton}" />
-                    <Button x:Name="AttListaFatura" Content="Atualizar Listas" Margin="0,128,10,0" Height="25" Click="AttListaFatura_Click" Style="{DynamicResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Right" Width="172" VerticalAlignment="Top" RenderTransformOrigin="0.512,0.083" />
+                    <Button x:Name="AttListaProj" Content="Atualizar Lista" Margin="11,87,280,0" VerticalAlignment="Top" Height="25" Click="AttListaProj_Click" Style="{DynamicResource MaterialDesignRaisedLightButton}" d:LayoutOverrides="HorizontalAlignment" />
+                    <Button x:Name="AttListaFatura" Content="Atualizar Listas" Margin="0,123,20,0" Height="25" Click="AttListaFatura_Click" Style="{DynamicResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Right" Width="230" VerticalAlignment="Top" RenderTransformOrigin="0.512,0.083" d:LayoutOverrides="HorizontalAlignment" />
                     <DataGrid x:Name="dataGridFatura"
                         AutoGenerateColumns="False"
                         SelectionUnit="FullRow"
@@ -51,7 +50,7 @@
                         CanUserAddRows="False"
                         CanUserDeleteRows="False"
                         IsReadOnly="True"
-                        Margin="410,163,0,10" HorizontalAlignment="Left" Width="172">
+                        Margin="407,153,0,10" HorizontalAlignment="Left" Width="230" d:LayoutOverrides="LeftMargin, RightMargin">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding Nome}" Header="Nome" Width="Auto" CanUserResize="False"/>
                             <DataGridTextColumn Binding="{Binding precoProj}"  Header="Preço do Projeto" Width="Auto" CanUserResize="False"/>
@@ -59,11 +58,10 @@
                     </DataGrid>
                 </Grid>
             </GroupBox>
-            <GroupBox x:Name="groupBox2" Header="Clientes" Margin="0,0,15,10" HorizontalAlignment="Right" Width="235" materialDesign:ColorZoneAssist.Mode="PrimaryLight">
+            <GroupBox x:Name="groupBox2" Header="Clientes" Margin="0,0,15,10" HorizontalAlignment="Right" Width="270" materialDesign:ColorZoneAssist.Mode="PrimaryLight">
                 <Grid Margin="10,0,-2,1" RenderTransformOrigin="-0.92,-1.01">
-                    <Button x:Name="EditarCliente" Content="Editar Cliente" Margin="10,10,10,0" VerticalAlignment="Top" Height="32"/>
-                    <Button x:Name="AdicionarCliente" Content="Adicionar Cliente" Height="32" Margin="10,49,10,0" VerticalAlignment="Top" Click="AdicionarCliente_Click" Style="{DynamicResource MaterialDesignRaisedLightButton}"/>
-                    <Button x:Name="ListarClientes" Content="Listar Clientes" Margin="10,90,10,0" VerticalAlignment="Top" Height="29" Click="ListarClientes_Click"/>
+                    <Button x:Name="AdicionarCliente" Content="Adicionar Cliente" Height="32" Margin="10,10,10,0" VerticalAlignment="Top" Click="AdicionarCliente_Click" Style="{DynamicResource MaterialDesignRaisedLightButton}"/>
+                    <Button x:Name="ListarClientes" Content="Listar Clientes" Margin="10,47,10,0" VerticalAlignment="Top" Height="29" Click="ListarClientes_Click"/>
                     <DataGrid Name="dataGridClientes"
             AutoGenerateColumns="False"
             SelectionUnit="FullRow"
@@ -73,13 +71,13 @@
             CanUserAddRows="False"
             CanUserDeleteRows="False"
             IsReadOnly="True"
-            Margin="10,162,0,0" HorizontalAlignment="Left" Width="189">
+            Margin="10,109,0,0" HorizontalAlignment="Left" Width="224" d:LayoutOverrides="LeftMargin, RightMargin">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding Nome}" Header="Nome" Width="110" CanUserResize="False"/>
                             <DataGridTextColumn Binding="{Binding Fone}"  Header="Telefone" Width="Auto" CanUserResize="False"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button x:Name="AttLista" Content="Atualizar Lista" Margin="10,126,10,0" Height="23" Click="AttLista_Click" Style="{DynamicResource MaterialDesignRaisedLightButton}" VerticalAlignment="Top"/>
+                    <Button x:Name="AttLista" Content="Atualizar Lista" Margin="10,81,10,0" Height="23" Click="AttLista_Click" Style="{DynamicResource MaterialDesignRaisedLightButton}" VerticalAlignment="Top"/>
                 </Grid>
             </GroupBox>
         </Grid>

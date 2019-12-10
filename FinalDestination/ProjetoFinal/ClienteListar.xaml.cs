@@ -30,7 +30,7 @@ namespace ProjetoFinal
         private string foto = string.Empty;
         int i;
         NCliente n = new NCliente();
-        private Pessoa c;
+        public Pessoa c;
 
         public ClienteListar()
         {
@@ -45,6 +45,7 @@ namespace ProjetoFinal
 
         }
 
+
         private void DeletarCliente_Click(object sender, RoutedEventArgs e)
         {
             NCliente n = new NCliente();
@@ -57,10 +58,7 @@ namespace ProjetoFinal
                 dataGridClientes.ItemsSource = null;
                 dataGridClientes.ItemsSource = n.Listar();
             }
-            try
-            {
-
-            }
+            try { }
             catch
             {
                 ErroDesconhecido erroD = new ErroDesconhecido();
@@ -92,18 +90,18 @@ namespace ProjetoFinal
                         fotoIcone.Source = bi;
                     }
                 }
-
-
-
             }
         }
         private void AtualizarCliente_Click(object sender, RoutedEventArgs e)
         {
             Pessoa c = dataGridClientes.SelectedItem as Pessoa;
+            Projeto p = new Projeto();
 
             c.Nome = NomeTxt.Text;
+            p.NomeCliente = NomeTxt.Text;
             c.Fone = FoneTxt.Text;
             c.Email = EmailTxt.Text;
+            c.foto = p.fotoIconeCliente;
 
             if (!int.TryParse(FoneTxt.Text, out i))
             {
@@ -111,9 +109,7 @@ namespace ProjetoFinal
                 errNum.Show();
                 return;
             }
-            try
-            {
-            }
+            try { }
             catch
             {
                 ErroDesconhecido erroD = new ErroDesconhecido();
@@ -125,9 +121,8 @@ namespace ProjetoFinal
 
             ClienteEditado cEd = new ClienteEditado();
             cEd.Show();
-
-
         }
+
         private void MostrarIcone_Click(object sender, RoutedEventArgs e)
         {
             Pessoa c = dataGridClientes.SelectedItem as Pessoa;
@@ -148,11 +143,6 @@ namespace ProjetoFinal
                 {
                     ErroVerIcone erroVer = new ErroVerIcone();
                     erroVer.Show();
-                }
-                finally
-                {
-                    ErroDesconhecido erroDesconhecido = new ErroDesconhecido();
-                    erroDesconhecido.Show();
                 }
             }
         }
@@ -175,53 +165,13 @@ namespace ProjetoFinal
                 fotoIcone.Source = bi;
             }
         }
-        private void Insert_Click(object sender, RoutedEventArgs e)
-        {
-            Pessoa c = new Pessoa();
-            PCliente p = new PCliente();
-            List<Pessoa> cs = p.Open();
-            string n = NomeTxt.Text;
-            string m = EmailTxt.Text;
-            string t = FoneTxt.Text;
 
-            for (int i = 0; i < cs.Count; i++)
-                if (cs[i].Id == c.Id)
-                {
-                    cs.RemoveAt(i);
-                    break;
-                }
-
-            cs.Add(c);
-            p.Save(cs);
-        }
-        private void Update_Click(object sender, RoutedEventArgs e)
-        {
-            Pessoa m = new Pessoa();
-            m.Nome = NomeTxt.Text;
-            m.Fone = FoneTxt.Text;
-            m.Email = EmailTxt.Text;
-
-            NCliente n = new NCliente();
-            n.Update(m);
-            try
-            {
-
-            }
-            catch
-            {
-                ErroDesconhecido erroD = new ErroDesconhecido();
-                erroD.Show();
-            }
-        }
         private void SelectClick(object sender, RoutedEventArgs e)
         {
             NCliente n = new NCliente();
             dataGridClientes.ItemsSource = null;
             dataGridClientes.ItemsSource = n.Select();
-            try
-            {
-
-            }
+            try { }
             catch
             {
                 ErroDesconhecido erroD = new ErroDesconhecido();
@@ -229,5 +179,5 @@ namespace ProjetoFinal
             }
         }
     }
+}
        
-    }
