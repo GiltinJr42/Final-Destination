@@ -75,5 +75,18 @@ namespace Negocio
                     }
                 p.Save(cs);
             }
+            
+            public double SomaFatura()
+            {
+                Pprojeto p = new Pprojeto();
+                List<Projeto> cs = p.Open();
+                double SomaF = 0;
+                foreach (Projeto i in cs)
+                {
+                    SomaF += i.preco;
+                
+                }
+            return SomaF;
+        }
     }
 }

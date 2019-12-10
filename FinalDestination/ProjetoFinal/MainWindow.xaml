@@ -23,7 +23,6 @@
                     <Button x:Name="AddPrj" Content="Adicionar Projeto" Margin="10,10,280,0" VerticalAlignment="Top" Height="33" Click="CadastrarProjeto_Click" Style="{DynamicResource MaterialDesignRaisedLightButton}" d:LayoutOverrides="HorizontalAlignment" />
                     <Button x:Name="FaturaMensal" Content="Fatura Mensal" Margin="0,84,20,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="230" Click="FaturaMensal_Click" d:LayoutOverrides="HorizontalAlignment"/>
                     <Button x:Name="ListarProjetos" Content="Listar Projetos" Margin="10,50,280,0" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment, Height" Click="ListarProjetos_Click"/>
-                    <materialDesign:Card Margin="0,5,20,0" VerticalAlignment="Top" materialDesign:ShadowAssist.ShadowEdges="Bottom" HorizontalAlignment="Right" Width="230" Height="72" d:LayoutOverrides="HorizontalAlignment" />
                     <DataGrid x:Name="dataGridProjetos"
                         AutoGenerateColumns="False"
                         SelectionUnit="FullRow"
@@ -52,10 +51,12 @@
                         IsReadOnly="True"
                         Margin="407,153,0,10" HorizontalAlignment="Left" Width="230" d:LayoutOverrides="LeftMargin, RightMargin">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Binding="{Binding Nome}" Header="Nome" Width="Auto" CanUserResize="False"/>
-                            <DataGridTextColumn Binding="{Binding precoProj}"  Header="Preço do Projeto" Width="Auto" CanUserResize="False"/>
+                            <DataGridTextColumn Header="Cliente" Binding="{Binding NomeCliente}" Width="Auto"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Dinheiro Pago" Binding="{Binding preco}" Width="Auto"></DataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
+                    <TextBlock x:Name="SomaFatura" HorizontalAlignment="Right" Margin="0,27,60,0" TextWrapping="Wrap" Text="Soma das faturas atuais:" VerticalAlignment="Top"/>
+                    
                 </Grid>
             </GroupBox>
             <GroupBox x:Name="groupBox2" Header="Clientes" Margin="0,0,15,10" HorizontalAlignment="Right" Width="270" materialDesign:ColorZoneAssist.Mode="PrimaryLight">

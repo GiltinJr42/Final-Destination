@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Modelo;
+using Negocio;
 
 namespace ProjetoFinal
 {
@@ -26,12 +28,36 @@ namespace ProjetoFinal
         public static bool VerificarSenha(string usuario, string senha)
         {
             bool r = false;
-            if (usuario == "Ana Ligia")
+            if (usuario == "Admin")
             {
                 r = senha == "12345";
             }
-        
-                return r;
+            if (r == false)
+            {
+
+                NCliente f = new NCliente();
+                List<Pessoa> a = f.Listar();
+                foreach (Pessoa x in a)
+                {
+                    string h = x.senha;
+                    string te = "";
+                    foreach (char pl in h)
+                    {
+                        int v = pl;
+                        v -= 10;
+                        te += Convert.ToChar(v);
+                    }
+                    if (x.Email == n && s == te)
+                    {
+                        r = true;
+                        p = x.Tipo;
+                        u = x;
+                        break;
+                    }
+                }
+            }
+
+            return r;
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)

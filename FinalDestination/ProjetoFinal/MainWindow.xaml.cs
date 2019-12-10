@@ -30,6 +30,8 @@ namespace ProjetoFinal
             InitializeComponent();
             dataGridClientes.ItemsSource = n.Listar();
             dataGridProjetos.ItemsSource = p.Listar();
+            dataGridFatura.ItemsSource = p.Listar();
+            SomaFatura.Text += p.SomaFatura();
 
         }
 
@@ -77,7 +79,9 @@ namespace ProjetoFinal
         private void AttListaFatura_Click(object sender, RoutedEventArgs e)
         {
             dataGridClientes.ItemsSource = n.Listar();
+            SomaFatura.Text = "Soma das faturas atuais:" + p.SomaFatura();
         }
+
 
 
     }
