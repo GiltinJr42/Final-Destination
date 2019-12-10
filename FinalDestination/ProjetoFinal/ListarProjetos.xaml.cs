@@ -24,16 +24,16 @@ namespace ProjetoFinal
     /// </summary>
     public partial class ListarProjetos : Window
     {
-      
+        private string fotoP = string.Empty;
+        NProjeto n = new NProjeto();
+        private Projeto c;
         public ListarProjetos()
         {
             InitializeComponent();
             dataGridProjetos.ItemsSource = n.Listar();
         }
 
-        private string fotoP = string.Empty;
-        NProjeto n = new NProjeto();
-        private Projeto c;
+       
 
         private void dataGridProjetos_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

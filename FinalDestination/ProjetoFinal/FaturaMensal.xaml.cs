@@ -27,17 +27,34 @@ namespace ProjetoFinal
 
         Pessoa c = new Pessoa();
         Projeto p = new Projeto();
-        Fatura f = new Fatura();
+        NProjeto cl = new NProjeto();
         public FaturaMensal()
         {
             InitializeComponent();
-         
+            dataGridFatura.ItemsSource = cl.Listar();
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            List<Fatura> list = new List<Fatura>();
             
             
+            
+        }
+        private void DeletarFatura_Click(object sender, RoutedEventArgs e)
+        {
+
+            Projeto c = new Projeto();
+            
+            try { if (dataGridFatura.SelectedItem != null)
+            {
+                cl.Delete((Projeto)dataGridFatura.SelectedItem);
+                dataGridFatura.ItemsSource = cl.Listar();
+            }
+            }
+            catch
+            {
+                ErroDesconhecido erroD = new ErroDesconhecido();
+                erroD.Show();
+            }
         }
     }
 }

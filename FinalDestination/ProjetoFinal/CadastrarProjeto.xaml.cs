@@ -16,7 +16,7 @@ namespace ProjetoFinal
     public partial class CadastrarProjeto : Window
     {
         public NProjeto cl = new NProjeto();
-        private Pessoa p = new Pessoa();
+        private Projeto p = new Projeto();
         public NCliente nc = new NCliente();
 
         private string IconeProjeto = string.Empty;
@@ -38,7 +38,6 @@ namespace ProjetoFinal
             double preco = Convert.ToDouble(CustoProjeto.Text);
             double valorConstr = Convert.ToDouble(CustoConstrucao.Text);
             
-            Projeto p = new Projeto();
             p.NomeP = nome; p.endereco = endereco; p.sinopse = sinopse; p.linksDrive = linksDrive; p.preco = preco; p.valorConstr = valorConstr; p.fotoP = fotoP; 
             cl.Inserir(p);
             ProjetoAdicionado projAdd = new ProjetoAdicionado();
@@ -63,25 +62,18 @@ namespace ProjetoFinal
                 ImgDynamic.Source = bi;
             }
         }
-        int clienteID = 0;
-        string NomeCliente = string.Empty;
-        string fotoIconeCliente = string.Empty;
+      
         private void comboBox_DropDownClosed(object sender, EventArgs e)
         {
-            Pessoa c = ClientesComboBox.SelectedItem as Pessoa;
-            Projeto p = new Projeto();
+            
             p.NomeCliente = (ClientesComboBox.SelectedItem as Pessoa).Nome;
             p.clienteID = (ClientesComboBox.SelectedItem as Pessoa).Id;
             p.fotoIconeCliente = (ClientesComboBox.SelectedItem as Pessoa).foto;
 
-            p.clienteID = c.Id;
-            p.NomeCliente = c.Nome;
-            p.fotoIconeCliente = c.foto;
-
         }
         private void Checked_Checked(object sender, RoutedEventArgs e)
         {
-            text1.Text = "Projeto finalizado! Parabéns!.";
+            text1.Text = "Projeto finalizado! Parabéns!";
         }
         private void Unchecked_Checked(object sender, RoutedEventArgs e)
         {

@@ -24,10 +24,17 @@
                 CanUserReorderColumns="True"
                 CanUserResizeRows="True" Margin="0,10,10,0">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Nome}" Header="Nome do cliente"/>
-
-                        <DataGridTextColumn Binding="{Binding preco}"  Header="Preço pago"/>
+                        <DataGridTextColumn Binding="{Binding NomeCliente}" Header="Cliente" Width="Auto" CanUserResize="True"/>
+                        <DataGridTextColumn Binding="{Binding preco}" Header="Preço Projeto" Width="Auto" />
+                        <DataGridTemplateColumn Header="Deletar Fatura" Width="120">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button x:Name="DeletarProjeto" Content="Deletar" Click="DeletarFatura_Click"></Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
                     </DataGrid.Columns>
+                   
                 </DataGrid>
             </Grid>
         </GroupBox>
