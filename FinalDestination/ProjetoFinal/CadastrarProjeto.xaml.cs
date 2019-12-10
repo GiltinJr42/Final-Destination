@@ -66,7 +66,7 @@ namespace ProjetoFinal
         int clienteID = 0;
         string NomeCliente = string.Empty;
         string fotoIconeCliente = string.Empty;
-        private void Clientes_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void comboBox_DropDownClosed(object sender, EventArgs e)
         {
             Pessoa c = ClientesComboBox.SelectedItem as Pessoa;
             Projeto p = new Projeto();
@@ -79,6 +79,16 @@ namespace ProjetoFinal
             p.fotoIconeCliente = c.foto;
 
         }
+        private void Checked_Checked(object sender, RoutedEventArgs e)
+        {
+            text1.Text = "Projeto finalizado! Parabéns!.";
+        }
+        private void Unchecked_Checked(object sender, RoutedEventArgs e)
+        {
+            text1.Text = "Projeto em andamento.";
+        }
+
+
     }
 }
 
